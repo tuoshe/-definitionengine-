@@ -10,3 +10,8 @@ install: compile-pb
 
 build: compile-pb
 	go build
+
+test: compile-pb
+	go test pirosb3/real_feed/controller
+	go test pirosb3/real_feed/datasource
+	go test pirosb3/real_feed/feed
