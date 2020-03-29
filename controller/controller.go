@@ -75,3 +75,25 @@ func NewFeedController(
 
 func (fc *FeedController) Start() error {
 	if fc.started {
+		return errors.New("Feed Controller is already started and cannot be restarted. Please create a new instance")
+	}
+	fc.startLock.Lock()
+	defer fc.startLock.Unlock()
+
+	fc.started = true
+	fc.websocket = datasource.NewCoinbaseProWebsocket(fc.ctx, fc.product, fc.outChan, fc.inChan)
+	fc.websocket.Start()
+
+	go fc.runOrderbookReporter()
+	go fc.runLoop()
+	return nil
+}
+
+func (fc *FeedController) runOrderbookReporter() {
+	timer := time.NewTicker(ORDERBOOK_REPORT_TICKER_SECS * time.Second)
+	for {
+		select {
+		case <-fc.ctx.Done():
+			log.Warning("Orderbook reporter shutdown")
+			return
+		case <-timer.C:
