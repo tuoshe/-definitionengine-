@@ -57,3 +57,21 @@ type FeedController struct {
 func NewFeedController(
 	ctx context.Context,
 	product string,
+) *FeedController {
+	aUUID, _ := uuid.NewUUID()
+	orderbook := feed.NewOrderbookFeed(product)
+	newContext, stopFn := context.WithCancel(ctx)
+	return &FeedController{
+		uuid:      aUUID.String(),
+		orderbook: orderbook,
+		stopFn:    stopFn,
+		ctx:       newContext,
+		started:   false,
+		outChan:   make(chan (map[string]interface{}), CHANNEL_BUFFER_SIZE),
+		inChan:    make(chan (interface{}), CHANNEL_BUFFER_SIZE),
+		product:   product,
+	}
+}
+
+func (fc *FeedController) Start() error {
+	if fc.started {
