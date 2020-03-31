@@ -97,3 +97,29 @@ func (fc *FeedController) runOrderbookReporter() {
 			log.Warning("Orderbook reporter shutdown")
 			return
 		case <-timer.C:
+			fc.orderbook.CleanUpOrderbook()
+
+			bids, asks := fc.orderbook.GetBookCount()
+			orderbookDepthGauge.WithLabelValues(fc.uuid, fc.product, "bids").Set(float64(bids))
+			orderbookDepthGauge.WithLabelValues(fc.uuid, fc.product, "asks").Set(float64(asks))
+		}
+	}
+}
+
+func (fc *FeedController) runLoop() {
+	for {
+		select {
+		case <-fc.ctx.Done():
+			log.Warning("Feed controller event loop shut down")
+			return
+		case wsType := <-fc.outChan:
+			switch wsType["type"].(string) {
+			case "snapshot":
+				bidsInterface := wsType["bids"].([]interface{})
+				bids := make([]*feed.Update, len(bidsInterface))
+				for idx, bidsEl := range bidsInterface {
+					bids[idx] = &feed.Update{
+						Price: bidsEl.([]interface{})[0].(string),
+						Size:  bidsEl.([]interface{})[1].(string),
+					}
+				}
