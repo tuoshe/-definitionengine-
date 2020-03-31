@@ -123,3 +123,36 @@ func (fc *FeedController) runLoop() {
 						Size:  bidsEl.([]interface{})[1].(string),
 					}
 				}
+
+				asksInterface := wsType["asks"].([]interface{})
+				asks := make([]*feed.Update, len(asksInterface))
+				for idx, asksEl := range asksInterface {
+					asks[idx] = &feed.Update{
+						Price: asksEl.([]interface{})[0].(string),
+						Size:  asksEl.([]interface{})[1].(string),
+					}
+				}
+				fc.orderbook.SetSnapshot(time.Now().Unix(), bids, asks)
+				log.WithField("numBids", len(bids)).WithField("numAsks", len(asks)).Infoln("Set new snapshot")
+			case "l2update":
+				timestamp, err := DateStringToUnixEpoch(wsType["time"].(string))
+				if err != nil {
+					log.WithField("timestamp", wsType["time"].(string)).Errorln("Incorrect date format found.")
+					continue
+				}
+
+				var bids []*feed.Update
+				var asks []*feed.Update
+				changes := wsType["changes"].([]interface{})
+				for _, change := range changes {
+					changeEl := change.([]interface{})
+					update := &feed.Update{
+						Price: changeEl[1].(string),
+						Size:  changeEl[2].(string),
+					}
+					switch changeEl[0] {
+					case "buy":
+						bids = append(bids, update)
+					case "sell":
+						asks = append(asks, update)
+					}
