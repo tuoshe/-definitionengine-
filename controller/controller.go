@@ -156,3 +156,30 @@ func (fc *FeedController) runLoop() {
 					case "sell":
 						asks = append(asks, update)
 					}
+				}
+				fc.orderbook.WriteUpdate(timestamp, bids, asks)
+			case "heartbeat":
+				heartbeatTicker.WithLabelValues(fc.uuid, fc.product).Inc()
+			case "subscriptions":
+			default:
+				log.WithField("messageType", wsType["type"].(string)).Warningln("Received an unexpected message")
+			}
+		}
+	}
+}
+
+func (fc *FeedController) Stop() {
+	if fc.started {
+		fc.stopFn()
+	}
+}
+
+func (fc *FeedController) BuyQuote(amount float64) (float64, int64, error) {
+	return fc.orderbook.BuyQuote(amount)
+}
+func (fc *FeedController) SellQuote(amount float64) (float64, int64, error) {
+	return fc.orderbook.SellQuote(amount)
+}
+func (fc *FeedController) BuyBase(amount float64) (float64, int64, error) {
+	return fc.orderbook.BuyBase(amount)
+}
