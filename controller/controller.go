@@ -183,3 +183,6 @@ func (fc *FeedController) SellQuote(amount float64) (float64, int64, error) {
 func (fc *FeedController) BuyBase(amount float64) (float64, int64, error) {
 	return fc.orderbook.BuyBase(amount)
 }
+func (fc *FeedController) SellBase(amount float64) (float64, int64, error) {
+	return fc.orderbook.SellBase(amount)
+}
