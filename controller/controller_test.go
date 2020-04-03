@@ -2,4 +2,5 @@ package controller
 
 import "testing"
 
-func TestDateParsi
+func TestDateParsingWorks(t *testing.T) {
+	dateString :=
