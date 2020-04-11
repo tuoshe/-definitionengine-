@@ -7,4 +7,4 @@ func TestDateParsingWorks(t *testing.T) {
 	expectedResult := int64(1602449402)
 	result, _ := DateStringToUnixEpoch(dateString)
 	if result != expectedResult {
-		
+		t.Errorf("Expected %d but got 
