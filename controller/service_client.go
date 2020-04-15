@@ -7,4 +7,5 @@ import (
 	"pirosb3/real_feed/rpc"
 )
 
-type Or
+type OrderbookGrpcController struct {
+	
