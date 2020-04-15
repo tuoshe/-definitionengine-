@@ -10,4 +10,7 @@ import (
 type OrderbookGrpcController struct {
 	rpc.UnimplementedOrderbookServiceServer
 	feedController *FeedController
-	
+	product        string
+}
+
+func
