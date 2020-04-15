@@ -8,4 +8,6 @@ import (
 )
 
 type OrderbookGrpcController struct {
-	rpc.UnimplementedOrderbookServiceServe
+	rpc.UnimplementedOrderbookServiceServer
+	feedController *FeedController
+	
