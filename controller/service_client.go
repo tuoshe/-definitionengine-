@@ -13,4 +13,4 @@ type OrderbookGrpcController struct {
 	product        string
 }
 
-func NewOrderbookGrpcController(feedController *FeedContro
+func NewOrderbookGrpcController(feedController *FeedController, product string) *Orderboo
