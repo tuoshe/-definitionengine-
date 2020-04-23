@@ -15,4 +15,5 @@ type OrderbookGrpcController struct {
 
 func NewOrderbookGrpcController(feedController *FeedController, product string) *OrderbookGrpcController {
 	return &OrderbookGrpcController{
-		feedControll
+		feedController: feedController,
+		product:   
