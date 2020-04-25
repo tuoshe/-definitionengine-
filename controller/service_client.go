@@ -20,4 +20,4 @@ func NewOrderbookGrpcController(feedController *FeedController, product string) 
 	}
 }
 
-func (ob *OrderbookGrpcController) handleResponse(response float64, lastUpdated int
+func (ob *OrderbookGrpcController) handleResponse(response float64, lastUpdated int64, err error, productRequested str
