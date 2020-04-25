@@ -20,4 +20,4 @@ func NewOrderbookGrpcController(feedController *FeedController, product string) 
 	}
 }
 
-func (ob *Orde
+func (ob *OrderbookGrpcController) handleResponse(res
