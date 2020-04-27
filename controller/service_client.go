@@ -22,4 +22,5 @@ func NewOrderbookGrpcController(feedController *FeedController, product string) 
 
 func (ob *OrderbookGrpcController) handleResponse(response float64, lastUpdated int64, err error, productRequested string) (*rpc.PricingResponse, error) {
 	if ob.product != productRequested {
-		re
+		return &rpc.PricingResponse{
+			P
