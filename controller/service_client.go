@@ -24,4 +24,4 @@ func (ob *OrderbookGrpcController) handleResponse(response float64, lastUpdated 
 	if ob.product != productRequested {
 		return &rpc.PricingResponse{
 			Product: ob.product,
-			E
+			Error:   fmt.Sprintf("Requested quo
