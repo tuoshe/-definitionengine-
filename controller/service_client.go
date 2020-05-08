@@ -27,4 +27,5 @@ func (ob *OrderbookGrpcController) handleResponse(response float64, lastUpdated 
 			Error:   fmt.Sprintf("Requested quote for feed '%s', but service is serving feed '%s'", productRequested, ob.product),
 		}, nil
 	}
-	if err != ni
+	if err != nil {
+		return &rpc.PricingRe
