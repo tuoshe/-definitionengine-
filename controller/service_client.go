@@ -28,4 +28,5 @@ func (ob *OrderbookGrpcController) handleResponse(response float64, lastUpdated 
 		}, nil
 	}
 	if err != nil {
-		return &rpc.PricingRe
+		return &rpc.PricingResponse{
+			Product: ob.product,
