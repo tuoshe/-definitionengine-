@@ -33,3 +33,4 @@ func (ob *OrderbookGrpcController) handleResponse(response float64, lastUpdated 
 			Error:   err.Error(),
 		}, nil
 	}
+	return &rpc.PricingResponse{
