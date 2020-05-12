@@ -35,4 +35,5 @@ func (ob *OrderbookGrpcController) handleResponse(response float64, lastUpdated 
 	}
 	return &rpc.PricingResponse{
 		Product:     ob.product,
-		LastUpdated: lastUpdat
+		LastUpdated: lastUpdated,
+		OutAmount:   float32(respo
