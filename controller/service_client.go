@@ -40,4 +40,4 @@ func (ob *OrderbookGrpcController) handleResponse(response float64, lastUpdated 
 	}, nil
 }
 
-func (ob Orderbo
+func (ob OrderbookGrpcController) BuyBase(ctx context.Co
