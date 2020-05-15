@@ -40,4 +40,5 @@ func (ob *OrderbookGrpcController) handleResponse(response float64, lastUpdated 
 	}, nil
 }
 
-func (ob OrderbookGrpcController) BuyBase(ctx context.Context, in *rpc.PricingRequest) (*rpc.PricingRes
+func (ob OrderbookGrpcController) BuyBase(ctx context.Context, in *rpc.PricingRequest) (*rpc.PricingResponse, error) {
+	respons
