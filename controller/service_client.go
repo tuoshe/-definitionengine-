@@ -41,4 +41,4 @@ func (ob *OrderbookGrpcController) handleResponse(response float64, lastUpdated 
 }
 
 func (ob OrderbookGrpcController) BuyBase(ctx context.Context, in *rpc.PricingRequest) (*rpc.PricingResponse, error) {
-	respons
+	response, lastUpdated, err := ob.fee
