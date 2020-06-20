@@ -50,4 +50,5 @@ func (ob OrderbookGrpcController) BuyQuote(ctx context.Context, in *rpc.PricingR
 	return ob.handleResponse(response, lastUpdated, err, in.GetProduct())
 }
 
-func (ob OrderbookGrpcController) SellBase(ctx context.Context, in *rpc.PricingRequest) (*rpc.PricingResp
+func (ob OrderbookGrpcController) SellBase(ctx context.Context, in *rpc.PricingRequest) (*rpc.PricingResponse, error) {
+	response, lastUpd
