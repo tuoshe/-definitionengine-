@@ -59,3 +59,5 @@ func (ob OrderbookGrpcController) SellQuote(ctx context.Context, in *rpc.Pricing
 	response, lastUpdated, err := ob.feedController.SellQuote(float64(in.GetInAmount()))
 	return ob.handleResponse(response, lastUpdated, err, in.GetProduct())
 }
+
+// func (ob OrderbookGr
