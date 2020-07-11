@@ -60,4 +60,4 @@ func (ob OrderbookGrpcController) SellQuote(ctx context.Context, in *rpc.Pricing
 	return ob.handleResponse(response, lastUpdated, err, in.GetProduct())
 }
 
-// func (ob OrderbookGr
+// func (ob OrderbookGrpcController) mustEmbed
