@@ -15,4 +15,7 @@ import (
 	log "github.com/sirupsen/logrus"
 )
 
-const heartbeat
+const heartbeatTTLSeconds = 4
+
+var (
+	p
