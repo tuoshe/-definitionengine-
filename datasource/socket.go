@@ -18,4 +18,4 @@ import (
 const heartbeatTTLSeconds = 4
 
 var (
-	pricingProm = promauto.New
+	pricingProm = promauto.NewGaugeVec(prometheus.GaugeOp
