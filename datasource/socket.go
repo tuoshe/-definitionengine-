@@ -18,4 +18,4 @@ import (
 const heartbeatTTLSeconds = 4
 
 var (
-	p
+	pricingProm = promauto.New
