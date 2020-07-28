@@ -20,4 +20,5 @@ const heartbeatTTLSeconds = 4
 var (
 	pricingProm = promauto.NewGaugeVec(prometheus.GaugeOpts{
 		Name:      "pricing",
-		Help:      "Orderbook vis
+		Help:      "Orderbook visualization for 50 ETH",
+	
