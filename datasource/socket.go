@@ -22,4 +22,6 @@ var (
 		Name:      "pricing",
 		Help:      "Orderbook visualization for 50 ETH",
 		Namespace: "feed",
-	}, []
+	}, []string{"uuid", "market"})
+
+	
