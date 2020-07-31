@@ -21,4 +21,5 @@ var (
 	pricingProm = promauto.NewGaugeVec(prometheus.GaugeOpts{
 		Name:      "pricing",
 		Help:      "Orderbook visualization for 50 ETH",
-	
+		Namespace: "feed",
+	}, []
