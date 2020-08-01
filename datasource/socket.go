@@ -24,4 +24,4 @@ var (
 		Namespace: "feed",
 	}, []string{"uuid", "market"})
 
-	updatesCounter = promaut
+	updatesCounter = promauto.NewCounterVec(prometheus.CounterOp
