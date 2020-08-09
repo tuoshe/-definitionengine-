@@ -26,4 +26,4 @@ var (
 
 	updatesCounter = promauto.NewCounterVec(prometheus.CounterOpts{
 		Name:      "updates",
-		Help:      "Shows the frequency o
+		Help:      "Shows the frequency of orderbook updates comi
