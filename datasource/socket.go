@@ -28,4 +28,6 @@ var (
 		Name:      "updates",
 		Help:      "Shows the frequency of orderbook updates coming out of the websocket",
 		Namespace: "feed",
-	}, []strin
+	}, []string{"uuid", "market"})
+
+	droppedPa
