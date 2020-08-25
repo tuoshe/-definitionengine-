@@ -30,4 +30,4 @@ var (
 		Namespace: "feed",
 	}, []string{"uuid", "market"})
 
-	droppedPa
+	droppedPacketsCounter = prom
