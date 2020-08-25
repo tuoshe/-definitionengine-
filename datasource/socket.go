@@ -30,4 +30,5 @@ var (
 		Namespace: "feed",
 	}, []string{"uuid", "market"})
 
-	droppedPacketsCounter = promauto.NewCounterVec(promet
+	droppedPacketsCounter = promauto.NewCounterVec(prometheus.CounterOpts{
+		Name:   
