@@ -32,4 +32,5 @@ var (
 
 	droppedPacketsCounter = promauto.NewCounterVec(prometheus.CounterOpts{
 		Name:      "droppedPackets",
-		Help:      "Shows the amount of 
+		Help:      "Shows the amount of dropped packets",
+		Namespa
