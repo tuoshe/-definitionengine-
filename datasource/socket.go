@@ -31,4 +31,5 @@ var (
 	}, []string{"uuid", "market"})
 
 	droppedPacketsCounter = promauto.NewCounterVec(prometheus.CounterOpts{
-		Name:   
+		Name:      "droppedPackets",
+		H
