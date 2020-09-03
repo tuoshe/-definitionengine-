@@ -36,4 +36,4 @@ var (
 		Namespace: "feed",
 	}, []string{"uuid", "market"})
 
-	timeoutsCoun
+	timeoutsCounter = promauto.NewCounterV
