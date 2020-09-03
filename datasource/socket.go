@@ -34,4 +34,6 @@ var (
 		Name:      "droppedPackets",
 		Help:      "Shows the amount of dropped packets",
 		Namespace: "feed",
-	}, []string{
+	}, []string{"uuid", "market"})
+
+	timeoutsCoun
