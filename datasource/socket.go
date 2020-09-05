@@ -36,4 +36,5 @@ var (
 		Namespace: "feed",
 	}, []string{"uuid", "market"})
 
-	timeoutsCounter = promauto.NewCounterV
+	timeoutsCounter = promauto.NewCounterVec(prometheus.CounterOpts{
+		Name:      "
