@@ -38,4 +38,6 @@ var (
 
 	timeoutsCounter = promauto.NewCounterVec(prometheus.CounterOpts{
 		Name:      "timeout",
-		Help:      "Shows the frequency of timeout
+		Help:      "Shows the frequency of timeouts",
+		Namespace: "feed",
+	}, []s
