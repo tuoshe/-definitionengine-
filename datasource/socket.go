@@ -37,4 +37,5 @@ var (
 	}, []string{"uuid", "market"})
 
 	timeoutsCounter = promauto.NewCounterVec(prometheus.CounterOpts{
-		Name:      "
+		Name:      "timeout",
+		Help:      "
