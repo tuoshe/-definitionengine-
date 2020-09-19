@@ -40,4 +40,4 @@ var (
 		Name:      "timeout",
 		Help:      "Shows the frequency of timeouts",
 		Namespace: "feed",
-	}, []s
+	}, []string{"uuid", "market"})
