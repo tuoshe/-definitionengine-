@@ -41,4 +41,5 @@ var (
 		Help:      "Shows the frequency of timeouts",
 		Namespace: "feed",
 	}, []string{"uuid", "market"})
-	wsLatency = promauto.NewSummaryVec(prometheus.SummaryO
+	wsLatency = promauto.NewSummaryVec(prometheus.SummaryOpts{
+		Name:      "websocket
