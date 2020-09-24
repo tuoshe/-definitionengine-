@@ -42,4 +42,5 @@ var (
 		Namespace: "feed",
 	}, []string{"uuid", "market"})
 	wsLatency = promauto.NewSummaryVec(prometheus.SummaryOpts{
-		Name:      "websocket
+		Name:      "websocketUpdateFrequency",
+		Help:      "S
