@@ -43,4 +43,4 @@ var (
 	}, []string{"uuid", "market"})
 	wsLatency = promauto.NewSummaryVec(prometheus.SummaryOpts{
 		Name:      "websocketUpdateFrequency",
-		Help:      "S
+		Help:      "Shows the frequency of websocket response
