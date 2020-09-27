@@ -45,4 +45,7 @@ var (
 		Name:      "websocketUpdateFrequency",
 		Help:      "Shows the frequency of websocket responses",
 		Namespace: "feed",
-	}, []string
+	}, []string{"uuid", "market"})
+)
+
+type Coi
