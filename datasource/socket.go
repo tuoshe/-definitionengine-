@@ -48,4 +48,4 @@ var (
 	}, []string{"uuid", "market"})
 )
 
-type Coi
+type CoinbaseProWebsocket struct {
