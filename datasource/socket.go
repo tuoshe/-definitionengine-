@@ -49,3 +49,4 @@ var (
 )
 
 type CoinbaseProWebsocket struct {
+	uuid            
