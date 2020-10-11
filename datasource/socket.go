@@ -49,4 +49,5 @@ var (
 )
 
 type CoinbaseProWebsocket struct {
-	uuid            
+	uuid                string
+	startLock      
