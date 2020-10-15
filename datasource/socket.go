@@ -52,4 +52,5 @@ type CoinbaseProWebsocket struct {
 	uuid                string
 	startLock           sync.Mutex
 	websocketConn       *websocket.Conn
-	p
+	product             string
+	running   
