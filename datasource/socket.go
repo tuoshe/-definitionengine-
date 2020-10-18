@@ -55,4 +55,5 @@ type CoinbaseProWebsocket struct {
 	product             string
 	running             bool
 	ctx                 context.Context
-	outChan            
+	outChan             chan (map[string]interface{})
+	inC
