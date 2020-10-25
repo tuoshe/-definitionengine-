@@ -57,4 +57,5 @@ type CoinbaseProWebsocket struct {
 	ctx                 context.Context
 	outChan             chan (map[string]interface{})
 	inChan              chan (interface{})
-	outInternalChan     chan (map[string]interface{}
+	outInternalChan     chan (map[string]interface{})
+	timeoutInternalChan chan (b
