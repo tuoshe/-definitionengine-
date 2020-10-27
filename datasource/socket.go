@@ -58,4 +58,7 @@ type CoinbaseProWebsocket struct {
 	outChan             chan (map[string]interface{})
 	inChan              chan (interface{})
 	outInternalChan     chan (map[string]interface{})
-	timeoutInternalChan chan (b
+	timeoutInternalChan chan (bool)
+}
+
+// NewCoinbasePro
