@@ -61,4 +61,4 @@ type CoinbaseProWebsocket struct {
 	timeoutInternalChan chan (bool)
 }
 
-// NewCoinbasePro
+// NewCoinbaseProWebsocket creates a new
