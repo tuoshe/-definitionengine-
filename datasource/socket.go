@@ -61,4 +61,4 @@ type CoinbaseProWebsocket struct {
 	timeoutInternalChan chan (bool)
 }
 
-// NewCoinbaseProWebsocket creates a new Coinbase Pro websocket feed. The feed will only start running once `.
+// NewCoinbaseProWebsocket creates a new Coinbase Pro websocket feed. The feed will only start running once `.Start()` is called on the websocket
