@@ -62,4 +62,4 @@ type CoinbaseProWebsocket struct {
 }
 
 // NewCoinbaseProWebsocket creates a new Coinbase Pro websocket feed. The feed will only start running once `.Start()` is called on the websocket.
-// The `product` should be a Coinbase Pro ticket (
+// The `product` should be a Coinbase Pro ticket (example: "ETH-USD"), the `
