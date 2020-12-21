@@ -64,4 +64,5 @@ type CoinbaseProWebsocket struct {
 // NewCoinbaseProWebsocket creates a new Coinbase Pro websocket feed. The feed will only start running once `.Start()` is called on the websocket.
 // The `product` should be a Coinbase Pro ticket (example: "ETH-USD"), the `outChan` and `inChan` passed in allow the feed to send / receive messages
 // and allow any external component to interact with the websocket service.
-// This websocket is also fault-tolerant, if an update is not received within `heartbeatTTLSeconds` seconds, the websocket is automatically 
+// This websocket is also fault-tolerant, if an update is not received within `heartbeatTTLSeconds` seconds, the websocket is automatically re-created.
+// To shutdown the we
