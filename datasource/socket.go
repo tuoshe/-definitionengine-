@@ -65,4 +65,4 @@ type CoinbaseProWebsocket struct {
 // The `product` should be a Coinbase Pro ticket (example: "ETH-USD"), the `outChan` and `inChan` passed in allow the feed to send / receive messages
 // and allow any external component to interact with the websocket service.
 // This websocket is also fault-tolerant, if an update is not received within `heartbeatTTLSeconds` seconds, the websocket is automatically re-created.
-// To shutdown the we
+// To shutdown the websocket, simply canc
