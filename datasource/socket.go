@@ -66,4 +66,5 @@ type CoinbaseProWebsocket struct {
 // and allow any external component to interact with the websocket service.
 // This websocket is also fault-tolerant, if an update is not received within `heartbeatTTLSeconds` seconds, the websocket is automatically re-created.
 // To shutdown the websocket, simply cancel the context passed in as first argument.
-func NewCoinb
+func NewCoinbaseProWebsocket(
+	ctx conte
