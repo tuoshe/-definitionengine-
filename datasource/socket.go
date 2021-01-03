@@ -68,4 +68,5 @@ type CoinbaseProWebsocket struct {
 // To shutdown the websocket, simply cancel the context passed in as first argument.
 func NewCoinbaseProWebsocket(
 	ctx context.Context,
-	product s
+	product string,
+	outChan chan (map[s
