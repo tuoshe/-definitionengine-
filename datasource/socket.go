@@ -67,4 +67,5 @@ type CoinbaseProWebsocket struct {
 // This websocket is also fault-tolerant, if an update is not received within `heartbeatTTLSeconds` seconds, the websocket is automatically re-created.
 // To shutdown the websocket, simply cancel the context passed in as first argument.
 func NewCoinbaseProWebsocket(
-	ctx conte
+	ctx context.Context,
+	product s
