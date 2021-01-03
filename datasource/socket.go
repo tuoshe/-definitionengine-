@@ -69,4 +69,5 @@ type CoinbaseProWebsocket struct {
 func NewCoinbaseProWebsocket(
 	ctx context.Context,
 	product string,
-	outChan chan (map[s
+	outChan chan (map[string]interface{}),
+	inChan chan 
