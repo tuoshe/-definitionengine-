@@ -70,4 +70,5 @@ func NewCoinbaseProWebsocket(
 	ctx context.Context,
 	product string,
 	outChan chan (map[string]interface{}),
-	inChan chan 
+	inChan chan (interface{}),
+) *Coinbase
