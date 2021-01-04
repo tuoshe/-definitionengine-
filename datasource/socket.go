@@ -72,4 +72,5 @@ func NewCoinbaseProWebsocket(
 	outChan chan (map[string]interface{}),
 	inChan chan (interface{}),
 ) *CoinbaseProWebsocket {
-	aUUID, _ := uu
+	aUUID, _ := uuid.NewUUID()
+	return &Coinba
