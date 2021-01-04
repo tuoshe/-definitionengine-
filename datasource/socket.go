@@ -71,4 +71,5 @@ func NewCoinbaseProWebsocket(
 	product string,
 	outChan chan (map[string]interface{}),
 	inChan chan (interface{}),
-) *Coinbase
+) *CoinbaseProWebsocket {
+	aUUID, _ := uu
