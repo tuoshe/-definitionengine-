@@ -75,4 +75,5 @@ func NewCoinbaseProWebsocket(
 	aUUID, _ := uuid.NewUUID()
 	return &CoinbaseProWebsocket{
 		uuid:                aUUID.String(),
-		product:       
+		product:             product,
+		running:      
