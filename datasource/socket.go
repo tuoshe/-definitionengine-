@@ -77,4 +77,5 @@ func NewCoinbaseProWebsocket(
 		uuid:                aUUID.String(),
 		product:             product,
 		running:             false,
-		ctx:                
+		ctx:                 ctx,
+		inChan:         
