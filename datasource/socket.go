@@ -80,4 +80,5 @@ func NewCoinbaseProWebsocket(
 		ctx:                 ctx,
 		inChan:              inChan,
 		outChan:             outChan,
-		outInternalChan:     make(chan (map[string]interface{
+		outInternalChan:     make(chan (map[string]interface{})),
+		timeoutInternalCh
