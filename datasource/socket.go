@@ -79,4 +79,5 @@ func NewCoinbaseProWebsocket(
 		running:             false,
 		ctx:                 ctx,
 		inChan:              inChan,
-		outChan:             
+		outChan:             outChan,
+		outInternalChan:    
