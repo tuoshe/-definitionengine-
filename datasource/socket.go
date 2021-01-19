@@ -85,4 +85,4 @@ func NewCoinbaseProWebsocket(
 	}
 }
 
-func (ws *Co
+func (ws *CoinbaseProWebsocket) makeSub
