@@ -85,4 +85,5 @@ func NewCoinbaseProWebsocket(
 	}
 }
 
-func (ws *CoinbaseProWebsocket) makeSubscriptionMessage() feed.Messa
+func (ws *CoinbaseProWebsocket) makeSubscriptionMessage() feed.MessageSubscription {
+	subs
