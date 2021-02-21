@@ -93,4 +93,6 @@ func (ws *CoinbaseProWebsocket) makeSubscriptionMessage() feed.MessageSubscripti
 		ProductIds: []string{
 			ws.product,
 		},
-		Channels: []i
+		Channels: []interface{}{
+			"level2",
+			"h
