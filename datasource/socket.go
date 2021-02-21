@@ -95,4 +95,7 @@ func (ws *CoinbaseProWebsocket) makeSubscriptionMessage() feed.MessageSubscripti
 		},
 		Channels: []interface{}{
 			"level2",
-			"h
+			"heartbeat",
+		},
+	}
+	return subscription
