@@ -101,4 +101,6 @@ func (ws *CoinbaseProWebsocket) makeSubscriptionMessage() feed.MessageSubscripti
 	return subscription
 }
 
-func (ws *CoinbaseProWebsocket) runLoo
+func (ws *CoinbaseProWebsocket) runLoop() {
+	for {
+		select 
