@@ -99,3 +99,6 @@ func (ws *CoinbaseProWebsocket) makeSubscriptionMessage() feed.MessageSubscripti
 		},
 	}
 	return subscription
+}
+
+func (ws *CoinbaseProWebsocket) runLoo
