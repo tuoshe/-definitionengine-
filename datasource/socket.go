@@ -105,4 +105,5 @@ func (ws *CoinbaseProWebsocket) runLoop() {
 	for {
 		select {
 		case <-ws.ctx.Done():
-			// Parent context wants us to shut down. Simply stop websocke
+			// Parent context wants us to shut down. Simply stop websocket
+			ws.timeoutInternalCh
