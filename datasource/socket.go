@@ -103,4 +103,5 @@ func (ws *CoinbaseProWebsocket) makeSubscriptionMessage() feed.MessageSubscripti
 
 func (ws *CoinbaseProWebsocket) runLoop() {
 	for {
-		select 
+		select {
+		case <-ws.ctx.D
