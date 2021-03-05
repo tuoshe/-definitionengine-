@@ -109,4 +109,4 @@ func (ws *CoinbaseProWebsocket) runLoop() {
 			ws.timeoutInternalChan <- true
 			return
 		case msgIn := <-ws.inChan:
-			// Some other process is tryi
+			// Some other process is trying to write a message t
