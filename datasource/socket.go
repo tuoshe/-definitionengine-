@@ -110,4 +110,5 @@ func (ws *CoinbaseProWebsocket) runLoop() {
 			return
 		case msgIn := <-ws.inChan:
 			// Some other process is trying to write a message to the websocket
-			if ws.websock
+			if ws.websocketConn == nil {
+				
