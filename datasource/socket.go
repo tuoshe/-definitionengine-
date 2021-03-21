@@ -111,4 +111,6 @@ func (ws *CoinbaseProWebsocket) runLoop() {
 		case msgIn := <-ws.inChan:
 			// Some other process is trying to write a message to the websocket
 			if ws.websocketConn == nil {
-				log.Fatalln("Configured websocket does not exist, this should never happen. Messa
+				log.Fatalln("Configured websocket does not exist, this should never happen. Message was skipped")
+			}
+			ws
