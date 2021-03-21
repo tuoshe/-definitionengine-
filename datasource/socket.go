@@ -113,4 +113,5 @@ func (ws *CoinbaseProWebsocket) runLoop() {
 			if ws.websocketConn == nil {
 				log.Fatalln("Configured websocket does not exist, this should never happen. Message was skipped")
 			}
-			ws.websocketConn.WriteJSON
+			ws.websocketConn.WriteJSON(msgIn)
+		case msgOut := <-w
