@@ -115,4 +115,4 @@ func (ws *CoinbaseProWebsocket) runLoop() {
 			}
 			ws.websocketConn.WriteJSON(msgIn)
 		case msgOut := <-ws.outInternalChan:
-			// A message should be broadca
+			// A message should be broadcasted to the outside. Writes the me
