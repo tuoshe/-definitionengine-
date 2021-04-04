@@ -117,4 +117,6 @@ func (ws *CoinbaseProWebsocket) runLoop() {
 		case msgOut := <-ws.outInternalChan:
 			// A message should be broadcasted to the outside. Writes the message to an outbound queue without blocking
 			updatesCounter.WithLabelValues(ws.uuid, ws.product).Inc()
-			select 
+			select {
+			case ws.outChan <- msgOut:
+			default:
