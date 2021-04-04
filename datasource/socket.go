@@ -120,3 +120,4 @@ func (ws *CoinbaseProWebsocket) runLoop() {
 			select {
 			case ws.outChan <- msgOut:
 			default:
+				log.Warningln("Websocket h
