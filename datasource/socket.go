@@ -120,4 +120,5 @@ func (ws *CoinbaseProWebsocket) runLoop() {
 			select {
 			case ws.outChan <- msgOut:
 			default:
-				log.Warningln("Websocket has no consumer for outgoing messages, dropping the messag
+				log.Warningln("Websocket has no consumer for outgoing messages, dropping the message.")
+				droppedPacketsCounter.W
