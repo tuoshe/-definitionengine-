@@ -123,4 +123,5 @@ func (ws *CoinbaseProWebsocket) runLoop() {
 				log.Warningln("Websocket has no consumer for outgoing messages, dropping the message.")
 				droppedPacketsCounter.WithLabelValues(ws.uuid, ws.product).Inc()
 			}
-		case <-time.After(time.Second * heartbeatTT
+		case <-time.After(time.Second * heartbeatTTLSeconds):
+			// Something is w
