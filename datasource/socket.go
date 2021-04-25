@@ -124,4 +124,4 @@ func (ws *CoinbaseProWebsocket) runLoop() {
 				droppedPacketsCounter.WithLabelValues(ws.uuid, ws.product).Inc()
 			}
 		case <-time.After(time.Second * heartbeatTTLSeconds):
-			// Something is w
+			// Something is wrong, websocket has not been 
