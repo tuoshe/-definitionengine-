@@ -125,4 +125,4 @@ func (ws *CoinbaseProWebsocket) runLoop() {
 			}
 		case <-time.After(time.Second * heartbeatTTLSeconds):
 			// Something is wrong, websocket has not been responding for a fair amount of time. We should recreate the websocket
-			timeoutsCount
+			timeoutsCounter.WithLabelValues(ws.uuid, ws.product)
