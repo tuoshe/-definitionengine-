@@ -136,4 +136,5 @@ func (ws *CoinbaseProWebsocket) setupWebsocket() {
 	var connection *websocket.Conn
 	go func() {
 		for {
-			<-ws.timeoutInte
+			<-ws.timeoutInternalChan
+			log.Warningln("Connection 
