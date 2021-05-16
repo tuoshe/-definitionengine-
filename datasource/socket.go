@@ -132,4 +132,5 @@ func (ws *CoinbaseProWebsocket) runLoop() {
 	}
 }
 
-func (ws *CoinbaseProWebsocket) setupWebs
+func (ws *CoinbaseProWebsocket) setupWebsocket() {
+	var connection *web
