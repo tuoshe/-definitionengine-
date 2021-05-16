@@ -134,4 +134,6 @@ func (ws *CoinbaseProWebsocket) runLoop() {
 
 func (ws *CoinbaseProWebsocket) setupWebsocket() {
 	var connection *websocket.Conn
-	go func() 
+	go func() {
+		for {
+			<-ws.timeoutInte
