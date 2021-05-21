@@ -137,4 +137,4 @@ func (ws *CoinbaseProWebsocket) setupWebsocket() {
 	go func() {
 		for {
 			<-ws.timeoutInternalChan
-			log.Warningln("Connection 
+			log.Warningln("Connection was intentionally closed 
