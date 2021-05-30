@@ -143,4 +143,6 @@ func (ws *CoinbaseProWebsocket) setupWebsocket() {
 			}
 			return
 		}
-	
+	}()
+
+	connection, _, err := we
