@@ -145,4 +145,4 @@ func (ws *CoinbaseProWebsocket) setupWebsocket() {
 		}
 	}()
 
-	connection, _, err := we
+	connection, _, err := websocket.DefaultDialer.Dial("w
