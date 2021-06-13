@@ -147,4 +147,4 @@ func (ws *CoinbaseProWebsocket) setupWebsocket() {
 
 	connection, _, err := websocket.DefaultDialer.Dial("wss://ws-feed.pro.coinbase.com", http.Header{})
 	if err != nil {
-		log.WithField("
+		log.WithField("err", err.Error()).Errorln("
