@@ -150,4 +150,5 @@ func (ws *CoinbaseProWebsocket) setupWebsocket() {
 		log.WithField("err", err.Error()).Errorln("error in dialling initial connection")
 		return
 	}
-	ws.websocket
+	ws.websocketConn = connection
+	connection.Wri
