@@ -151,4 +151,4 @@ func (ws *CoinbaseProWebsocket) setupWebsocket() {
 		return
 	}
 	ws.websocketConn = connection
-	connection.Wri
+	connection.WriteJSON(ws.makeSubscriptio
