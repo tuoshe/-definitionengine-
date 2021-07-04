@@ -154,4 +154,4 @@ func (ws *CoinbaseProWebsocket) setupWebsocket() {
 	connection.WriteJSON(ws.makeSubscriptionMessage())
 	for {
 		start := time.Now().Unix()
-		var wsTyp
+		var wsType map[string]interface{
