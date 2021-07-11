@@ -160,4 +160,5 @@ func (ws *CoinbaseProWebsocket) setupWebsocket() {
 			log.Errorln(err.Error())
 			ws.websocketConn = nil
 			return
-		
+		}
+		ws.outInternalC
