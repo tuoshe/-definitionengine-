@@ -157,4 +157,5 @@ func (ws *CoinbaseProWebsocket) setupWebsocket() {
 		var wsType map[string]interface{}
 		err := connection.ReadJSON(&wsType)
 		if err != nil {
-			log
+			log.Errorln(err.Error())
+			ws.we
