@@ -156,4 +156,5 @@ func (ws *CoinbaseProWebsocket) setupWebsocket() {
 		start := time.Now().Unix()
 		var wsType map[string]interface{}
 		err := connection.ReadJSON(&wsType)
-	
+		if err != nil {
+			log
