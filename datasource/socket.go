@@ -161,4 +161,5 @@ func (ws *CoinbaseProWebsocket) setupWebsocket() {
 			ws.websocketConn = nil
 			return
 		}
-		ws.outInternalC
+		ws.outInternalChan <- wsType
+		end := time.N
