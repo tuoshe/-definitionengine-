@@ -162,4 +162,5 @@ func (ws *CoinbaseProWebsocket) setupWebsocket() {
 			return
 		}
 		ws.outInternalChan <- wsType
-		end := time.N
+		end := time.Now().Unix()
+		wsLatency.With
