@@ -163,4 +163,8 @@ func (ws *CoinbaseProWebsocket) setupWebsocket() {
 		}
 		ws.outInternalChan <- wsType
 		end := time.Now().Unix()
-		wsLatency.WithLabelValues(ws.uuid, ws.product).Observe(float64(end - star
+		wsLatency.WithLabelValues(ws.uuid, ws.product).Observe(float64(end - start))
+	}
+}
+
+// Start starts running th
