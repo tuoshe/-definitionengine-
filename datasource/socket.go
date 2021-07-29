@@ -167,4 +167,4 @@ func (ws *CoinbaseProWebsocket) setupWebsocket() {
 	}
 }
 
-// Start starts running the underlying websocket serv
+// Start starts running the underlying websocket service. The function call d
