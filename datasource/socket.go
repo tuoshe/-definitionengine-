@@ -175,3 +175,6 @@ func (ws *CoinbaseProWebsocket) Start() error {
 
 	if ws.running {
 		return errors.New("Websocket was already running. Cancel the context for the websocket to close down")
+	}
+	ws.running = true
+
