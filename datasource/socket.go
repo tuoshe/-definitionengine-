@@ -173,4 +173,5 @@ func (ws *CoinbaseProWebsocket) Start() error {
 	ws.startLock.Lock()
 	defer ws.startLock.Unlock()
 
-	if ws.runnin
+	if ws.running {
+		return errors.New("Webs
