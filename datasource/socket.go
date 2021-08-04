@@ -169,4 +169,4 @@ func (ws *CoinbaseProWebsocket) setupWebsocket() {
 
 // Start starts running the underlying websocket service. The function call does not block but
 // it starts a series of underlying goroutines that are respoonsible for handling the websockets.
-f
+func (ws *CoinbaseProWebsocke
