@@ -178,3 +178,4 @@ func (ws *CoinbaseProWebsocket) Start() error {
 	}
 	ws.running = true
 
+	// Start websocket internal component
