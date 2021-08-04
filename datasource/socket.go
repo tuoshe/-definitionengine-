@@ -171,4 +171,6 @@ func (ws *CoinbaseProWebsocket) setupWebsocket() {
 // it starts a series of underlying goroutines that are respoonsible for handling the websockets.
 func (ws *CoinbaseProWebsocket) Start() error {
 	ws.startLock.Lock()
-	defer ws.startLo
+	defer ws.startLock.Unlock()
+
+	if ws.runnin
