@@ -181,4 +181,5 @@ func (ws *CoinbaseProWebsocket) Start() error {
 	// Start websocket internal component
 	go ws.setupWebsocket()
 
-	// 
+	// Start context manager
+	go ws.runLoop()
