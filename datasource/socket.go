@@ -183,3 +183,6 @@ func (ws *CoinbaseProWebsocket) Start() error {
 
 	// Start context manager
 	go ws.runLoop()
+
+	return nil
+}
