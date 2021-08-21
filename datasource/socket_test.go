@@ -7,4 +7,5 @@ import (
 )
 
 func TestContextShutsDown(t *testing.T) {
-	outChan := make(chan (map[string]interfa
+	outChan := make(chan (map[string]interface{}))
+	inChan := make(chan (int
