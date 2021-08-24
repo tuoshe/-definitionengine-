@@ -11,4 +11,5 @@ func TestContextShutsDown(t *testing.T) {
 	inChan := make(chan (interface{}))
 
 	ctx, cancelFn := context.WithCancel(context.Background())
-	ws := NewCoin
+	ws := NewCoinbaseProWebsocket(
+		ctx, "ETH
