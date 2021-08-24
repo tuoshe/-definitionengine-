@@ -10,4 +10,5 @@ func TestContextShutsDown(t *testing.T) {
 	outChan := make(chan (map[string]interface{}))
 	inChan := make(chan (interface{}))
 
-	ctx, cancelFn := context.WithCancel(cont
+	ctx, cancelFn := context.WithCancel(context.Background())
+	ws := NewCoin
