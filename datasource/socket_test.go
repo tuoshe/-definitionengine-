@@ -14,3 +14,6 @@ func TestContextShutsDown(t *testing.T) {
 	ws := NewCoinbaseProWebsocket(
 		ctx, "ETH-USD", outChan, inChan,
 	)
+	ws.Start()
+	<-outChan
+	if ws
