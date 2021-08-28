@@ -17,4 +17,5 @@ func TestContextShutsDown(t *testing.T) {
 	ws.Start()
 	<-outChan
 	if ws.websocketConn == nil {
-		t.Error
+		t.Error("Websocket was supposed to exist")
+	}
