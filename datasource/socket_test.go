@@ -16,4 +16,5 @@ func TestContextShutsDown(t *testing.T) {
 	)
 	ws.Start()
 	<-outChan
-	if ws
+	if ws.websocketConn == nil {
+		t.Error
