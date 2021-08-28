@@ -19,3 +19,5 @@ func TestContextShutsDown(t *testing.T) {
 	if ws.websocketConn == nil {
 		t.Error("Websocket was supposed to exist")
 	}
+	cancelFn()
+	time.Sleep(time.Mill
