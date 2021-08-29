@@ -20,4 +20,5 @@ func TestContextShutsDown(t *testing.T) {
 		t.Error("Websocket was supposed to exist")
 	}
 	cancelFn()
-	time.Sleep(time.Mill
+	time.Sleep(time.Millisecond * 20)
+	if ws.we
