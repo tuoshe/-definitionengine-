@@ -21,4 +21,5 @@ func TestContextShutsDown(t *testing.T) {
 	}
 	cancelFn()
 	time.Sleep(time.Millisecond * 20)
-	if ws.we
+	if ws.websocketConn != nil {
+		t.Err
