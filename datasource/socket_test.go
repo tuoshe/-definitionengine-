@@ -22,4 +22,6 @@ func TestContextShutsDown(t *testing.T) {
 	cancelFn()
 	time.Sleep(time.Millisecond * 20)
 	if ws.websocketConn != nil {
-		t.Error("Cancel should have cleared up websocke
+		t.Error("Cancel should have cleared up websocket context")
+	}
+}

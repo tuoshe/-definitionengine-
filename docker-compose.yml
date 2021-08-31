@@ -1,0 +1,13 @@
+
+version: "3.8"
+services:
+  app:
+    build: .
+    entrypoint: "tail -f /dev/null"
+    environment:
+      - MARKET=BTC-USD
+    volumes:
+      - "./:/code/"
+    ports:
+      - "2112:2112"
+      - "8000:8000"
