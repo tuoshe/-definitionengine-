@@ -8,4 +8,4 @@ import (
 	"sync"
 	"time"
 
-	log "github
+	log "github.com/sirupsen/logrus
