@@ -14,4 +14,5 @@ import (
 const (
 	TIMEOUT_STALE_BOOK     = 5
 	INSUFFICIENT_LIQUIDITY = "INSUFFICIENT_LIQUIDITY"
-	BIDS                   = "B
+	BIDS                   = "BIDS"
+	ASKS                   = "ASKS"
