@@ -18,4 +18,4 @@ const (
 	ASKS                   = "ASKS"
 )
 
-// OrderbookFeed is the 
+// OrderbookFeed is the primary struct responsib
