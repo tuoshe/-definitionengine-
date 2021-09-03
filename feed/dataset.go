@@ -18,4 +18,4 @@ const (
 	ASKS                   = "ASKS"
 )
 
-// OrderbookFeed is the primary struct responsib
+// OrderbookFeed is the primary struct responsible for storage and access of th
