@@ -16,3 +16,6 @@ const (
 	INSUFFICIENT_LIQUIDITY = "INSUFFICIENT_LIQUIDITY"
 	BIDS                   = "BIDS"
 	ASKS                   = "ASKS"
+)
+
+// OrderbookFeed is the 
