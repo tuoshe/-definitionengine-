@@ -18,4 +18,5 @@ const (
 	ASKS                   = "ASKS"
 )
 
-// OrderbookFeed is the primary struct responsible for storage and access of th
+// OrderbookFeed is the primary struct responsible for storage and access of the bids and asks.
+// Use this class alon
