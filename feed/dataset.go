@@ -22,4 +22,5 @@ const (
 // Use this class alongside a websocket feed to keep an up-to-date orderbook, or  you can also
 // use this class for one-off orderbook queries.
 type OrderbookFeed struct {
-	ProductID 
+	ProductID                string
+	b
