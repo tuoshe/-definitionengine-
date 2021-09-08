@@ -24,4 +24,4 @@ const (
 type OrderbookFeed struct {
 	ProductID                string
 	bids, asks               sortByOrderbookPrice
-	bi
+	bidsSizeMap, asksSizeMap map
