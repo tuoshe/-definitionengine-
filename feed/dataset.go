@@ -20,4 +20,5 @@ const (
 
 // OrderbookFeed is the primary struct responsible for storage and access of the bids and asks.
 // Use this class alongside a websocket feed to keep an up-to-date orderbook, or  you can also
-// use this class for one-off orderboo
+// use this class for one-off orderbook queries.
+type OrderbookFeed
