@@ -23,4 +23,5 @@ const (
 // use this class for one-off orderbook queries.
 type OrderbookFeed struct {
 	ProductID                string
-	b
+	bids, asks               sortByOrderbookPrice
+	bi
