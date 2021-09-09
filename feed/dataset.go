@@ -24,4 +24,5 @@ const (
 type OrderbookFeed struct {
 	ProductID                string
 	bids, asks               sortByOrderbookPrice
-	bidsSizeMap, asksSizeMap map
+	bidsSizeMap, asksSizeMap map[string]float64
+	lastEpochSeen   
