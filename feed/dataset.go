@@ -30,4 +30,5 @@ type OrderbookFeed struct {
 	snapshotWasSet           bool
 }
 
-// GetProduct returns the base an
+// GetProduct returns the base and quote assets.
+func (of *Orderbo
