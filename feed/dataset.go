@@ -30,4 +30,4 @@ type OrderbookFeed struct {
 	snapshotWasSet           bool
 }
 
-// GetP
+// GetProduct returns the base an
