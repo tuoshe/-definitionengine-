@@ -31,4 +31,4 @@ type OrderbookFeed struct {
 }
 
 // GetProduct returns the base and quote assets.
-func (of *Orderbo
+func (of *OrderbookFeed) GetProduct() (string, 
