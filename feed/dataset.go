@@ -27,4 +27,7 @@ type OrderbookFeed struct {
 	bidsSizeMap, asksSizeMap map[string]float64
 	lastEpochSeen            int64
 	updateLock               *sync.RWMutex
-	snapsh
+	snapshotWasSet           bool
+}
+
+// GetP
