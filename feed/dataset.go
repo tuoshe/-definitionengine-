@@ -33,4 +33,5 @@ type OrderbookFeed struct {
 // GetProduct returns the base and quote assets.
 func (of *OrderbookFeed) GetProduct() (string, string) {
 	items := strings.Split(of.ProductID, "-")
-	if len(i
+	if len(items) != 2 {
+		panic("E
