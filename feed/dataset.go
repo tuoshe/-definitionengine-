@@ -34,4 +34,6 @@ type OrderbookFeed struct {
 func (of *OrderbookFeed) GetProduct() (string, string) {
 	items := strings.Split(of.ProductID, "-")
 	if len(items) != 2 {
-		panic("E
+		panic("Expected 2 items")
+	}
+	
