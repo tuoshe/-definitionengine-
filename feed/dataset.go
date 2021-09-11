@@ -26,4 +26,5 @@ type OrderbookFeed struct {
 	bids, asks               sortByOrderbookPrice
 	bidsSizeMap, asksSizeMap map[string]float64
 	lastEpochSeen            int64
-	updateLock     
+	updateLock               *sync.RWMutex
+	snapsh
