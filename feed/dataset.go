@@ -36,4 +36,5 @@ func (of *OrderbookFeed) GetProduct() (string, string) {
 	if len(items) != 2 {
 		panic("Expected 2 items")
 	}
-	
+	return items[0], items[1]
+}
