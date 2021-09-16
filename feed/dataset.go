@@ -40,4 +40,4 @@ func (of *OrderbookFeed) GetProduct() (string, string) {
 }
 
 // BuyQuote simulates a market buy of a certain amount. For example, in a
-// BTC-USD book, BuyQuote(usdAm
+// BTC-USD book, BuyQuote(usdAmount) will return btcToSe
