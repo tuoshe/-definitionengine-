@@ -45,4 +45,4 @@ func (of *OrderbookFeed) BuyQuote(amount float64) (float64, int64, error) {
 	return of.performMarketOperationOnQuote(amount, of.bids, of.bidsSizeMap)
 }
 
-// S
+// SellQuote simulates a market sell of 
