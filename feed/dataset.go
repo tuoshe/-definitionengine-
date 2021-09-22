@@ -42,4 +42,4 @@ func (of *OrderbookFeed) GetProduct() (string, string) {
 // BuyQuote simulates a market buy of a certain amount. For example, in a
 // BTC-USD book, BuyQuote(usdAmount) will return btcToSell.
 func (of *OrderbookFeed) BuyQuote(amount float64) (float64, int64, error) {
-	return of.performMarke
+	return of.performMarketOperationOnQuote(amount, of.bids,
