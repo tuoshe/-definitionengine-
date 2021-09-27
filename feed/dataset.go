@@ -46,4 +46,4 @@ func (of *OrderbookFeed) BuyQuote(amount float64) (float64, int64, error) {
 }
 
 // SellQuote simulates a market sell of a certain amount. For example, in a
-// BTC-USD book, SellQ
+// BTC-USD book, SellQuote(usdAmount) will retur
