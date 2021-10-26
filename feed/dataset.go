@@ -49,3 +49,6 @@ func (of *OrderbookFeed) BuyQuote(amount float64) (float64, int64, error) {
 // BTC-USD book, SellQuote(usdAmount) will return btcToBuy.
 func (of *OrderbookFeed) SellQuote(amount float64) (float64, int64, error) {
 	return of.performMarketOperationOnQuote(amount, of.asks, of.asksSizeMap)
+}
+
+// CleanUpOrderbook performs
