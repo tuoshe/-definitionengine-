@@ -53,4 +53,4 @@ func (of *OrderbookFeed) SellQuote(amount float64) (float64, int64, error) {
 
 // CleanUpOrderbook performs housekeeping on the books, by merging and removing
 // orders that have no size.
-func (of *Or
+func (of *OrderbookFeed) CleanUpOrder
