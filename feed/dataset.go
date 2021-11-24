@@ -58,4 +58,5 @@ func (of *OrderbookFeed) CleanUpOrderbook() {
 	defer of.updateLock.Unlock()
 
 	// Process bids
-	var newBids, newAsks []*orderbookS
+	var newBids, newAsks []*orderbookSortedKey
+	for _, bid := ran
