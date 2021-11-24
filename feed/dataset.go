@@ -59,4 +59,5 @@ func (of *OrderbookFeed) CleanUpOrderbook() {
 
 	// Process bids
 	var newBids, newAsks []*orderbookSortedKey
-	for _, bid := ran
+	for _, bid := range of.bids {
+		bidSize := of
