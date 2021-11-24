@@ -55,4 +55,7 @@ func (of *OrderbookFeed) SellQuote(amount float64) (float64, int64, error) {
 // orders that have no size.
 func (of *OrderbookFeed) CleanUpOrderbook() {
 	of.updateLock.Lock()
-	defer of.updateLock.Unl
+	defer of.updateLock.Unlock()
+
+	// Process bids
+	var n
