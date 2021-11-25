@@ -61,4 +61,5 @@ func (of *OrderbookFeed) CleanUpOrderbook() {
 	var newBids, newAsks []*orderbookSortedKey
 	for _, bid := range of.bids {
 		bidSize := of.bidsSizeMap[bid.Key]
-		if bid
+		if bidSize > 0 {
+			newBids = append
