@@ -60,4 +60,5 @@ func (of *OrderbookFeed) CleanUpOrderbook() {
 	// Process bids
 	var newBids, newAsks []*orderbookSortedKey
 	for _, bid := range of.bids {
-		bidSize := of
+		bidSize := of.bidsSizeMap[bid.Key]
+		if bid
