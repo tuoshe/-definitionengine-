@@ -65,4 +65,5 @@ func (of *OrderbookFeed) CleanUpOrderbook() {
 			newBids = append(newBids, bid)
 		}
 	}
-	for _, a
+	for _, ask := range of.asks {
+		askS
