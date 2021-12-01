@@ -66,4 +66,5 @@ func (of *OrderbookFeed) CleanUpOrderbook() {
 		}
 	}
 	for _, ask := range of.asks {
-		askS
+		askSize := of.asksSizeMap[ask.Key]
+		if
