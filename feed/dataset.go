@@ -68,4 +68,7 @@ func (of *OrderbookFeed) CleanUpOrderbook() {
 	for _, ask := range of.asks {
 		askSize := of.asksSizeMap[ask.Key]
 		if askSize > 0 {
-			newAsks = appe
+			newAsks = append(newAsks, ask)
+		}
+	}
+	of.bids = 
