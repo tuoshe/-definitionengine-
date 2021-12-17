@@ -75,3 +75,4 @@ func (of *OrderbookFeed) CleanUpOrderbook() {
 	of.asks = newAsks
 }
 
+func (of *OrderbookF
