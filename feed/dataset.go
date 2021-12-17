@@ -71,4 +71,7 @@ func (of *OrderbookFeed) CleanUpOrderbook() {
 			newAsks = append(newAsks, ask)
 		}
 	}
-	of.bids = 
+	of.bids = newBids
+	of.asks = newAsks
+}
+
