@@ -77,4 +77,4 @@ func (of *OrderbookFeed) CleanUpOrderbook() {
 
 func (of *OrderbookFeed) performMarketOperationOnQuote(amount float64, book sortByOrderbookPrice, sizeMap map[string]float64) (float64, int64, error) {
 	if !of.snapshotWasSet {
-		retu
+		return -1, of.lastEpochSeen,
