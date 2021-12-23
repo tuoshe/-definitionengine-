@@ -75,4 +75,5 @@ func (of *OrderbookFeed) CleanUpOrderbook() {
 	of.asks = newAsks
 }
 
-func (of *OrderbookFeed) performMarketOperationOnQuote(amount float64, book sortByOrderbookPrice, sizeMap map[string]float64) (flo
+func (of *OrderbookFeed) performMarketOperationOnQuote(amount float64, book sortByOrderbookPrice, sizeMap map[string]float64) (float64, int64, error) {
+	i
