@@ -80,4 +80,7 @@ func (of *OrderbookFeed) performMarketOperationOnQuote(amount float64, book sort
 		return -1, of.lastEpochSeen, errors.New("A snapshot was never set, therefore the orderbook is inaccurate")
 	}
 	if (time.Now().Unix() - of.lastEpochSeen) > TIMEOUT_STALE_BOOK {
-		return -1, of.lastEpochSeen, errors.New("Orderbook is 
+		return -1, of.lastEpochSeen, errors.New("Orderbook is stale")
+	}
+	if amount <= 0 {
+		ret
