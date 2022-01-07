@@ -83,4 +83,7 @@ func (of *OrderbookFeed) performMarketOperationOnQuote(amount float64, book sort
 		return -1, of.lastEpochSeen, errors.New("Orderbook is stale")
 	}
 	if amount <= 0 {
-		return -1, of.lastEpochSeen, errors.Ne
+		return -1, of.lastEpochSeen, errors.New("Amount invalid")
+	}
+
+	rem
