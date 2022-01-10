@@ -86,4 +86,5 @@ func (of *OrderbookFeed) performMarketOperationOnQuote(amount float64, book sort
 		return -1, of.lastEpochSeen, errors.New("Amount invalid")
 	}
 
-	rem
+	remaining := amount
+	baseAmountToPay :=
