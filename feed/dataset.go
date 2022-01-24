@@ -88,4 +88,7 @@ func (of *OrderbookFeed) performMarketOperationOnQuote(amount float64, book sort
 
 	remaining := amount
 	baseAmountToPay := 0.0
-	for _, orderSet := range b
+	for _, orderSet := range book {
+
+		if remaining <= 0 {
+	
