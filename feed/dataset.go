@@ -91,4 +91,7 @@ func (of *OrderbookFeed) performMarketOperationOnQuote(amount float64, book sort
 	for _, orderSet := range book {
 
 		if remaining <= 0 {
-	
+			break
+		}
+
+		of.updateLock.RLoc
