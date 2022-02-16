@@ -94,4 +94,5 @@ func (of *OrderbookFeed) performMarketOperationOnQuote(amount float64, book sort
 			break
 		}
 
-		of.updateLock.RLoc
+		of.updateLock.RLock()
+		size, ok := size
