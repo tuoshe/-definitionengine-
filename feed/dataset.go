@@ -98,4 +98,4 @@ func (of *OrderbookFeed) performMarketOperationOnQuote(amount float64, book sort
 		size, ok := sizeMap[orderSet.Key]
 		of.updateLock.RUnlock()
 		if !ok {
-			log.WithField("key", order
+			log.WithField("key", orderSet.Key).Errorln("Key cannot be foun
