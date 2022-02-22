@@ -96,4 +96,5 @@ func (of *OrderbookFeed) performMarketOperationOnQuote(amount float64, book sort
 
 		of.updateLock.RLock()
 		size, ok := sizeMap[orderSet.Key]
-		o
+		of.updateLock.RUnlock()
+		if !ok {
