@@ -101,4 +101,5 @@ func (of *OrderbookFeed) performMarketOperationOnQuote(amount float64, book sort
 			log.WithField("key", orderSet.Key).Errorln("Key cannot be found in lookup table.")
 			continue
 		}
-		maxQuoteAmount :
+		maxQuoteAmount := orderSet.Value * size
+		am
