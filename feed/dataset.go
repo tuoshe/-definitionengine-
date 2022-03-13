@@ -104,4 +104,7 @@ func (of *OrderbookFeed) performMarketOperationOnQuote(amount float64, book sort
 		maxQuoteAmount := orderSet.Value * size
 		amountToPurchase := maxQuoteAmount
 		if amountToPurchase > remaining {
-			amountToPur
+			amountToPurchase = remaining
+		}
+
+		// Per
