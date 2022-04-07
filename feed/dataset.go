@@ -107,4 +107,5 @@ func (of *OrderbookFeed) performMarketOperationOnQuote(amount float64, book sort
 			amountToPurchase = remaining
 		}
 
-		// Per
+		// Perform the transaction
+		remaining -
