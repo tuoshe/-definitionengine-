@@ -109,4 +109,5 @@ func (of *OrderbookFeed) performMarketOperationOnQuote(amount float64, book sort
 
 		// Perform the transaction
 		remaining -= amountToPurchase
-		baseAmountToPay += amountToP
+		baseAmountToPay += amountToPurchase / orderSet.Value
+	}
