@@ -115,4 +115,4 @@ func (of *OrderbookFeed) performMarketOperationOnQuote(amount float64, book sort
 		return baseAmountToPay, of.lastEpochSeen, nil
 	}
 
-	return -1, of.lastEpo
+	return -1, of.lastEpochSeen, errors.New(INSUFFICIEN
