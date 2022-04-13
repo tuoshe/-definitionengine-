@@ -115,4 +115,7 @@ func (of *OrderbookFeed) performMarketOperationOnQuote(amount float64, book sort
 		return baseAmountToPay, of.lastEpochSeen, nil
 	}
 
-	return -1, of.lastEpochSeen, errors.New(INSUFFICIEN
+	return -1, of.lastEpochSeen, errors.New(INSUFFICIENT_LIQUIDITY)
+}
+
+// BuyBase simula
