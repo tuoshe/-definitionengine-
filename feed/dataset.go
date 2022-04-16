@@ -118,4 +118,4 @@ func (of *OrderbookFeed) performMarketOperationOnQuote(amount float64, book sort
 	return -1, of.lastEpochSeen, errors.New(INSUFFICIENT_LIQUIDITY)
 }
 
-// BuyBase simula
+// BuyBase simulates a market buy of a c
