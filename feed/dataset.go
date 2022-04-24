@@ -118,4 +118,5 @@ func (of *OrderbookFeed) performMarketOperationOnQuote(amount float64, book sort
 	return -1, of.lastEpochSeen, errors.New(INSUFFICIENT_LIQUIDITY)
 }
 
-// BuyBase simulates a market buy of a certain amount. For exam
+// BuyBase simulates a market buy of a certain amount. For example, in a
+// BTC-USD book, Buy
