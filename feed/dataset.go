@@ -120,4 +120,4 @@ func (of *OrderbookFeed) performMarketOperationOnQuote(amount float64, book sort
 
 // BuyBase simulates a market buy of a certain amount. For example, in a
 // BTC-USD book, BuyBase(btcToBuy) will return usdSold.
-func (of *Orde
+func (of *OrderbookFeed) BuyBase(amount flo
