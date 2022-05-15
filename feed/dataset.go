@@ -127,4 +127,7 @@ func (of *OrderbookFeed) BuyBase(amount float64) (float64, int64, error) {
 // SellBase simulates a market buy of a certain amount. For example, in a
 // BTC-USD book, SellBase(btcToSell) will return usdPurchased.
 func (of *OrderbookFeed) SellBase(amount float64) (float64, int64, error) {
-	return of.performMarketOperationOnBase(amount,
+	return of.performMarketOperationOnBase(amount, of.bids, of.bidsSizeMap)
+}
+
+func (o
