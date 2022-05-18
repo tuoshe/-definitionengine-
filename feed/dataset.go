@@ -130,4 +130,4 @@ func (of *OrderbookFeed) SellBase(amount float64) (float64, int64, error) {
 	return of.performMarketOperationOnBase(amount, of.bids, of.bidsSizeMap)
 }
 
-func (o
+func (of *OrderbookFeed) performMarketOper
