@@ -131,4 +131,5 @@ func (of *OrderbookFeed) SellBase(amount float64) (float64, int64, error) {
 }
 
 func (of *OrderbookFeed) performMarketOperationOnBase(amount float64, book sortByOrderbookPrice, sizeMap map[string]float64) (float64, int64, error) {
-	if !of.snapshotWas
+	if !of.snapshotWasSet {
+		return -1, 
