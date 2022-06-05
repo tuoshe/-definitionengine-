@@ -132,4 +132,4 @@ func (of *OrderbookFeed) SellBase(amount float64) (float64, int64, error) {
 
 func (of *OrderbookFeed) performMarketOperationOnBase(amount float64, book sortByOrderbookPrice, sizeMap map[string]float64) (float64, int64, error) {
 	if !of.snapshotWasSet {
-		return -1, of.lastEpochSeen, errors.New("A snapshot was ne
+		return -1, of.lastEpochSeen, errors.New("A snapshot was never set, therefore the order
