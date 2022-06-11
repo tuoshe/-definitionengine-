@@ -135,4 +135,4 @@ func (of *OrderbookFeed) performMarketOperationOnBase(amount float64, book sortB
 		return -1, of.lastEpochSeen, errors.New("A snapshot was never set, therefore the orderbook is inaccurate")
 	}
 	if (time.Now().Unix() - of.lastEpochSeen) > TIMEOUT_STALE_BOOK {
-		re
+		return -1, of.lastEpochSeen, e
