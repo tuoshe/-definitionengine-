@@ -140,4 +140,5 @@ func (of *OrderbookFeed) performMarketOperationOnBase(amount float64, book sortB
 	if amount <= 0 {
 		return -1, of.lastEpochSeen, errors.New("Amount invalid")
 	}
-	remainingA
+	remainingAmt := amount
+	profitMade :
