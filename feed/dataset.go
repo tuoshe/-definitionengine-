@@ -138,4 +138,6 @@ func (of *OrderbookFeed) performMarketOperationOnBase(amount float64, book sortB
 		return -1, of.lastEpochSeen, errors.New("Orderbook is stale")
 	}
 	if amount <= 0 {
-		return -1, of.lastEpochSeen, errors.New("Amount
+		return -1, of.lastEpochSeen, errors.New("Amount invalid")
+	}
+	remainingA
