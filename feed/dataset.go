@@ -142,4 +142,6 @@ func (of *OrderbookFeed) performMarketOperationOnBase(amount float64, book sortB
 	}
 	remainingAmt := amount
 	profitMade := 0.0
-	for _, orderSet := range
+	for _, orderSet := range book {
+
+		of.updateLo
