@@ -145,4 +145,5 @@ func (of *OrderbookFeed) performMarketOperationOnBase(amount float64, book sortB
 	for _, orderSet := range book {
 
 		of.updateLock.RLock()
-		orderSize := si
+		orderSize := sizeMap[orderSet.Key]
+		of.upd
