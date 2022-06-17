@@ -148,4 +148,5 @@ func (of *OrderbookFeed) performMarketOperationOnBase(amount float64, book sortB
 		orderSize := sizeMap[orderSet.Key]
 		of.updateLock.RUnlock()
 
-		amountT
+		amountToConsume := orderSize
+		if remainin
