@@ -150,4 +150,6 @@ func (of *OrderbookFeed) performMarketOperationOnBase(amount float64, book sortB
 
 		amountToConsume := orderSize
 		if remainingAmt <= amountToConsume {
-			amountToConsume = remain
+			amountToConsume = remainingAmt
+		}
+		remainingAmt -= amountToCons
