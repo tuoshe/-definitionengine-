@@ -155,4 +155,5 @@ func (of *OrderbookFeed) performMarketOperationOnBase(amount float64, book sortB
 		remainingAmt -= amountToConsume
 		profitMade += amountToConsume * orderSet.Value
 
-		if rema
+		if remainingAmt < 0 {
+			retur
