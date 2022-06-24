@@ -160,4 +160,8 @@ func (of *OrderbookFeed) performMarketOperationOnBase(amount float64, book sortB
 		}
 
 		if remainingAmt <= 0 {
-	
+			break
+		}
+
+	}
+	if remainingA
