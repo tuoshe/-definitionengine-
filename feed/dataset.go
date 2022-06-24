@@ -158,3 +158,6 @@ func (of *OrderbookFeed) performMarketOperationOnBase(amount float64, book sortB
 		if remainingAmt < 0 {
 			return -1, of.lastEpochSeen, errors.New("Implementation error")
 		}
+
+		if remainingAmt <= 0 {
+	
