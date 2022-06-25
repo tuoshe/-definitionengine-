@@ -165,4 +165,6 @@ func (of *OrderbookFeed) performMarketOperationOnBase(amount float64, book sortB
 
 	}
 	if remainingAmt == 0 {
-		return profitMade, o
+		return profitMade, of.lastEpochSeen, nil
+	}
+	return
