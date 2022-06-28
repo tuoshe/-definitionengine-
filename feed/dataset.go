@@ -167,4 +167,7 @@ func (of *OrderbookFeed) performMarketOperationOnBase(amount float64, book sortB
 	if remainingAmt == 0 {
 		return profitMade, of.lastEpochSeen, nil
 	}
-	return -1, of.lastEpochSeen, errors.New(IN
+	return -1, of.lastEpochSeen, errors.New(INSUFFICIENT_LIQUIDITY)
+}
+
+f
