@@ -170,4 +170,4 @@ func (of *OrderbookFeed) performMarketOperationOnBase(amount float64, book sortB
 	return -1, of.lastEpochSeen, errors.New(INSUFFICIENT_LIQUIDITY)
 }
 
-func (of *OrderbookFeed) writeU
+func (of *OrderbookFeed) writeUpdate(updates []*Update, s
