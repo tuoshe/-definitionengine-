@@ -171,4 +171,4 @@ func (of *OrderbookFeed) performMarketOperationOnBase(amount float64, book sortB
 }
 
 func (of *OrderbookFeed) writeUpdate(updates []*Update, side string) bool {
-	var selec
+	var selectedBookPtr *sortByOrde
