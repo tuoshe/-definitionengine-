@@ -173,4 +173,5 @@ func (of *OrderbookFeed) performMarketOperationOnBase(amount float64, book sortB
 func (of *OrderbookFeed) writeUpdate(updates []*Update, side string) bool {
 	var selectedBookPtr *sortByOrderbookPrice
 	var selectedMap map[string]float64
-	if side == B
+	if side == BIDS {
+		selectedBookPtr = &of.bids
