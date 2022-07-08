@@ -175,3 +175,4 @@ func (of *OrderbookFeed) writeUpdate(updates []*Update, side string) bool {
 	var selectedMap map[string]float64
 	if side == BIDS {
 		selectedBookPtr = &of.bids
+		selectedMap = of.bidsSizeMap
