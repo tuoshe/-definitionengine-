@@ -180,4 +180,7 @@ func (of *OrderbookFeed) writeUpdate(updates []*Update, side string) bool {
 		selectedBookPtr = &of.asks
 		selectedMap = of.asksSizeMap
 	} else {
-		panic("Unsupp
+		panic("Unsupported side: " + side)
+	}
+
+	perfo
