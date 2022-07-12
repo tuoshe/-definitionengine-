@@ -179,4 +179,5 @@ func (of *OrderbookFeed) writeUpdate(updates []*Update, side string) bool {
 	} else if side == ASKS {
 		selectedBookPtr = &of.asks
 		selectedMap = of.asksSizeMap
-	
+	} else {
+		panic("Unsupp
