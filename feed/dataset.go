@@ -183,4 +183,5 @@ func (of *OrderbookFeed) writeUpdate(updates []*Update, side string) bool {
 		panic("Unsupported side: " + side)
 	}
 
-	perfo
+	performedInsert := false
+	for
