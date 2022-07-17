@@ -184,4 +184,4 @@ func (of *OrderbookFeed) writeUpdate(updates []*Update, side string) bool {
 	}
 
 	performedInsert := false
-	for
+	for _, update := range update
