@@ -185,4 +185,4 @@ func (of *OrderbookFeed) writeUpdate(updates []*Update, side string) bool {
 
 	performedInsert := false
 	for _, update := range updates {
-		parsedSize, err :=
+		parsedSize, err := strconv.ParseFloat(update.Siz
