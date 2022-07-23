@@ -187,4 +187,4 @@ func (of *OrderbookFeed) writeUpdate(updates []*Update, side string) bool {
 	for _, update := range updates {
 		parsedSize, err := strconv.ParseFloat(update.Size, 64)
 		if err != nil {
-			log.WithField("msg
+			log.WithField("msg", err.Error()).Errorln("
