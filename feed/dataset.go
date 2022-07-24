@@ -188,4 +188,6 @@ func (of *OrderbookFeed) writeUpdate(updates []*Update, side string) bool {
 		parsedSize, err := strconv.ParseFloat(update.Size, 64)
 		if err != nil {
 			log.WithField("msg", err.Error()).Errorln("Skipped update due to error")
-			con
+			continue
+		}
+		_, ok := selec
