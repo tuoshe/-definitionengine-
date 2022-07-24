@@ -190,4 +190,4 @@ func (of *OrderbookFeed) writeUpdate(updates []*Update, side string) bool {
 			log.WithField("msg", err.Error()).Errorln("Skipped update due to error")
 			continue
 		}
-		_, ok := selec
+		_, ok := selectedMap[update.Price]
