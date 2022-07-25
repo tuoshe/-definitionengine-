@@ -191,3 +191,4 @@ func (of *OrderbookFeed) writeUpdate(updates []*Update, side string) bool {
 			continue
 		}
 		_, ok := selectedMap[update.Price]
+		selectedMap[update.Price] = 
