@@ -193,4 +193,4 @@ func (of *OrderbookFeed) writeUpdate(updates []*Update, side string) bool {
 		_, ok := selectedMap[update.Price]
 		selectedMap[update.Price] = parsedSize
 		if !ok {
-			pars
+			parsedPrice, err := strconv.Par
