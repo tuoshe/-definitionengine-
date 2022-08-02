@@ -195,4 +195,4 @@ func (of *OrderbookFeed) writeUpdate(updates []*Update, side string) bool {
 		if !ok {
 			parsedPrice, err := strconv.ParseFloat(update.Price, 64)
 			if err != nil {
-				log.WithField
+				log.WithField("msg", err.Error()).Errorl
