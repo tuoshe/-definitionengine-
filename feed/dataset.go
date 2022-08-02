@@ -193,4 +193,6 @@ func (of *OrderbookFeed) writeUpdate(updates []*Update, side string) bool {
 		_, ok := selectedMap[update.Price]
 		selectedMap[update.Price] = parsedSize
 		if !ok {
-			parsedPrice, err := strconv.ParseFloat(update.Price, 64
+			parsedPrice, err := strconv.ParseFloat(update.Price, 64)
+			if err != nil {
+				log.WithField
