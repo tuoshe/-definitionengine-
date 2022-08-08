@@ -198,4 +198,5 @@ func (of *OrderbookFeed) writeUpdate(updates []*Update, side string) bool {
 				log.WithField("msg", err.Error()).Errorln("Skipped update due to error")
 				continue
 			}
-			*selectedBookPtr = append(*selectedBookPtr, &orderbookSort
+			*selectedBookPtr = append(*selectedBookPtr, &orderbookSortedKey{
+				Key:   update.Pr
