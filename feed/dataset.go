@@ -199,4 +199,5 @@ func (of *OrderbookFeed) writeUpdate(updates []*Update, side string) bool {
 				continue
 			}
 			*selectedBookPtr = append(*selectedBookPtr, &orderbookSortedKey{
-				Key:   update.Pr
+				Key:   update.Price,
+				Value: parsedPric
