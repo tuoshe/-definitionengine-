@@ -202,4 +202,7 @@ func (of *OrderbookFeed) writeUpdate(updates []*Update, side string) bool {
 				Key:   update.Price,
 				Value: parsedPrice,
 			})
-			performedIn
+			performedInsert = true
+		}
+	}
+	return performe
