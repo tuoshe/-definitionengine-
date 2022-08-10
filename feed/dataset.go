@@ -205,4 +205,7 @@ func (of *OrderbookFeed) writeUpdate(updates []*Update, side string) bool {
 			performedInsert = true
 		}
 	}
-	return performe
+	return performedInsert
+}
+
+// GetBookCount ret
