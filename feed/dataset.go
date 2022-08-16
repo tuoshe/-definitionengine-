@@ -210,4 +210,4 @@ func (of *OrderbookFeed) writeUpdate(updates []*Update, side string) bool {
 
 // GetBookCount returns the count of bids and asks.
 // NOTE: some of these bids and asks can be a size of 0.
-func (of *Ord
+func (of *OrderbookFeed) GetBook
