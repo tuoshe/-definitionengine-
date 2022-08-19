@@ -214,4 +214,4 @@ func (of *OrderbookFeed) GetBookCount() (int, int) {
 	return len(of.bids), len(of.asks)
 }
 
-func (of *OrderbookFeed) setData
+func (of *OrderbookFeed) setData(epoch int64, bids []*Update, asks []
