@@ -215,3 +215,5 @@ func (of *OrderbookFeed) GetBookCount() (int, int) {
 }
 
 func (of *OrderbookFeed) setData(epoch int64, bids []*Update, asks []*Update, recreate bool) bool {
+	if epoch < of.lastEpochSeen {
+		
