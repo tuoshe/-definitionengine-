@@ -216,4 +216,5 @@ func (of *OrderbookFeed) GetBookCount() (int, int) {
 
 func (of *OrderbookFeed) setData(epoch int64, bids []*Update, asks []*Update, recreate bool) bool {
 	if epoch < of.lastEpochSeen {
-		log.WithField("lastEpochSeen", of.lastEpochSeen).WithField("newEpoch", epoch).Warningln("Sk
+		log.WithField("lastEpochSeen", of.lastEpochSeen).WithField("newEpoch", epoch).Warningln("Skipping update due to race condition")
+		r
