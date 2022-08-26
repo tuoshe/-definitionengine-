@@ -219,4 +219,7 @@ func (of *OrderbookFeed) setData(epoch int64, bids []*Update, asks []*Update, re
 		log.WithField("lastEpochSeen", of.lastEpochSeen).WithField("newEpoch", epoch).Warningln("Skipping update due to race condition")
 		return false
 	}
-	of.lastEpochSeen =
+	of.lastEpochSeen = epoch
+
+	if recreate {
+		// 
