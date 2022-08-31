@@ -224,4 +224,5 @@ func (of *OrderbookFeed) setData(epoch int64, bids []*Update, asks []*Update, re
 	if recreate {
 		// Re-create all maps and structs
 		of.bids = nil
-		of.
+		of.asks = nil
+		of.asksSizeMa
