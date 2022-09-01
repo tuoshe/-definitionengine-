@@ -225,4 +225,4 @@ func (of *OrderbookFeed) setData(epoch int64, bids []*Update, asks []*Update, re
 		// Re-create all maps and structs
 		of.bids = nil
 		of.asks = nil
-		of.asksSizeMa
+		of.asksSizeMap = make(map[string
