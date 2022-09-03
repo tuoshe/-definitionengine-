@@ -226,4 +226,5 @@ func (of *OrderbookFeed) setData(epoch int64, bids []*Update, asks []*Update, re
 		of.bids = nil
 		of.asks = nil
 		of.asksSizeMap = make(map[string]float64)
-		of.bidsSizeMap = mak
+		of.bidsSizeMap = make(map[string]float64)
+	
