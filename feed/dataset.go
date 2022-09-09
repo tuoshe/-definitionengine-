@@ -227,4 +227,6 @@ func (of *OrderbookFeed) setData(epoch int64, bids []*Update, asks []*Update, re
 		of.asks = nil
 		of.asksSizeMap = make(map[string]float64)
 		of.bidsSizeMap = make(map[string]float64)
-	
+	}
+
+	// Write a fresh bat
