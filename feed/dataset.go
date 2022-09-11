@@ -230,4 +230,5 @@ func (of *OrderbookFeed) setData(epoch int64, bids []*Update, asks []*Update, re
 	}
 
 	// Write a fresh batch of updates
-	of.updateLock.Loc
+	of.updateLock.Lock()
+	containsNewInsertsB
