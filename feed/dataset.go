@@ -233,4 +233,6 @@ func (of *OrderbookFeed) setData(epoch int64, bids []*Update, asks []*Update, re
 	of.updateLock.Lock()
 	containsNewInsertsBids := of.writeUpdate(bids, BIDS)
 	containsNewInsertsAsks := of.writeUpdate(asks, ASKS)
-	of.updateLock.Unlock(
+	of.updateLock.Unlock()
+
+	// Sort the results after
