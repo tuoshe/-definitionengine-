@@ -236,4 +236,5 @@ func (of *OrderbookFeed) setData(epoch int64, bids []*Update, asks []*Update, re
 	of.updateLock.Unlock()
 
 	// Sort the results after the update was written
-	if containsNewInsertsBid
+	if containsNewInsertsBids {
+		sort.Slice(of.bids,
