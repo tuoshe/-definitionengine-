@@ -240,4 +240,5 @@ func (of *OrderbookFeed) setData(epoch int64, bids []*Update, asks []*Update, re
 		sort.Slice(of.bids, func(i, j int) bool {
 			return of.bids[i].Value > of.bids[j].Value
 		})
-	
+	}
+	if containsNewInsertsA
