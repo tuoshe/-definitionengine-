@@ -249,4 +249,5 @@ func (of *OrderbookFeed) setData(epoch int64, bids []*Update, asks []*Update, re
 	return true
 }
 
-// SetSnapshot resets the orderbook with a new snapshot o
+// SetSnapshot resets the orderbook with a new snapshot of bids and asks. This operation
+//
