@@ -250,4 +250,4 @@ func (of *OrderbookFeed) setData(epoch int64, bids []*Update, asks []*Update, re
 }
 
 // SetSnapshot resets the orderbook with a new snapshot of bids and asks. This operation
-//
+// is idempotent and c
