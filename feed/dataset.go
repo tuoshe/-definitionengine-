@@ -251,4 +251,5 @@ func (of *OrderbookFeed) setData(epoch int64, bids []*Update, asks []*Update, re
 
 // SetSnapshot resets the orderbook with a new snapshot of bids and asks. This operation
 // is idempotent and clears out the old books.
-func (of *OrderbookFeed) SetSnapshot(epoch int64, bids []*Update, asks []*Update) bool 
+func (of *OrderbookFeed) SetSnapshot(epoch int64, bids []*Update, asks []*Update) bool {
+	result := of.setDa
