@@ -253,4 +253,5 @@ func (of *OrderbookFeed) setData(epoch int64, bids []*Update, asks []*Update, re
 // is idempotent and clears out the old books.
 func (of *OrderbookFeed) SetSnapshot(epoch int64, bids []*Update, asks []*Update) bool {
 	result := of.setData(epoch, bids, asks, true)
-	if 
+	if result {
+		of.snapshotWasSe
