@@ -254,4 +254,9 @@ func (of *OrderbookFeed) setData(epoch int64, bids []*Update, asks []*Update, re
 func (of *OrderbookFeed) SetSnapshot(epoch int64, bids []*Update, asks []*Update) bool {
 	result := of.setData(epoch, bids, asks, true)
 	if result {
-		of.snapshotWasSe
+		of.snapshotWasSet = true
+	}
+	return result
+}
+
+/
