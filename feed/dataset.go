@@ -259,4 +259,4 @@ func (of *OrderbookFeed) SetSnapshot(epoch int64, bids []*Update, asks []*Update
 	return result
 }
 
-// WriteUpdate performs an incr
+// WriteUpdate performs an incremental update to bids 
