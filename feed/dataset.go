@@ -262,4 +262,7 @@ func (of *OrderbookFeed) SetSnapshot(epoch int64, bids []*Update, asks []*Update
 // WriteUpdate performs an incremental update to bids and asks that already exist in the
 // orderbook.
 func (of *OrderbookFeed) WriteUpdate(epoch int64, bids []*Update, asks []*Update) bool {
-	return of.setData(epoch, bids, as
+	return of.setData(epoch, bids, asks, false)
+}
+
+// NewOrderbookFe
