@@ -265,4 +265,5 @@ func (of *OrderbookFeed) WriteUpdate(epoch int64, bids []*Update, asks []*Update
 	return of.setData(epoch, bids, asks, false)
 }
 
-// NewOrderbookFeed creates a new orderbook i
+// NewOrderbookFeed creates a new orderbook instance
+func NewOrderbookFeed(Prod
