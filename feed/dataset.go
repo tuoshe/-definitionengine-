@@ -266,4 +266,5 @@ func (of *OrderbookFeed) WriteUpdate(epoch int64, bids []*Update, asks []*Update
 }
 
 // NewOrderbookFeed creates a new orderbook instance
-func NewOrderbookFeed(ProductID string) *OrderbookFeed 
+func NewOrderbookFeed(ProductID string) *OrderbookFeed {
+	return &OrderbookFee
