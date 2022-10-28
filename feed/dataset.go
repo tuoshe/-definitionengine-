@@ -270,4 +270,5 @@ func NewOrderbookFeed(ProductID string) *OrderbookFeed {
 	return &OrderbookFeed{
 		ProductID:     ProductID,
 		lastEpochSeen: -1,
-		upd
+		updateLock:    &sync.RWMutex{},
+	
