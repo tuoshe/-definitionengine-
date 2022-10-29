@@ -271,4 +271,4 @@ func NewOrderbookFeed(ProductID string) *OrderbookFeed {
 		ProductID:     ProductID,
 		lastEpochSeen: -1,
 		updateLock:    &sync.RWMutex{},
-	
+		asksSizeMap:   make(map[stri
