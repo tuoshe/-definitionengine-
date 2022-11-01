@@ -47,3 +47,36 @@ func TestAddItem(t *testing.T) {
 		&Update{Price: "320", Size: "0.5"},
 		&Update{Price: "310", Size: "1.5"},
 	}
+	asks := []*Update{
+		&Update{Price: "335.12", Size: "0.5"},
+	}
+	timestamp := time.Now().Unix()
+	isInserted := ob.SetSnapshot(timestamp, bids, asks)
+	if isInserted != true {
+		t.Fail()
+	}
+	numBids, numAsks := ob.GetBookCount()
+	if numBids != 3 || numAsks != 1 {
+		t.Errorf("Num bids expected as 3, but was %d. Num asks expected was 1, but was %d", numBids, numAsks)
+	}
+
+	result, _, err := ob.SellBase(0.6)
+	if err != nil {
+		t.Error(err.Error())
+	}
+	if result != 198.6 {
+		t.Errorf("Expected 198.6 but got %f", result)
+	}
+}
+
+func TestUpdate(t *testing.T) {
+	ob := NewOrderbookFeed("ETH-DAI")
+	ob.SetSnapshot(time.Now().Unix(), []*Update{}, []*Update{})
+	numBids, numAsks := ob.GetBookCount()
+	if numBids != 0 || numAsks != 0 {
+		t.Errorf("Num bids expected as 0, but was %d. Num asks expected was 0, but was %d", numBids, numAsks)
+	}
+
+	ob.WriteUpdate(time.Now().Unix(), []*Update{
+		&Update{Price: "333.2", Size: "0.5"},
+		&Update{Price: "310", Size: "1.5"},
