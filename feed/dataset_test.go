@@ -115,3 +115,27 @@ func TestUpdate(t *testing.T) {
 func TestBuyBase(t *testing.T) {
 	ob := NewOrderbookFeed("ETH-DAI")
 	bids := []*Update{
+		&Update{Price: "333.2", Size: "0.5"},
+		&Update{Price: "320", Size: "0.5"},
+		&Update{Price: "310", Size: "1.5"},
+	}
+	asks := []*Update{
+		&Update{Price: "335.12", Size: "0.5"},
+	}
+	timestamp := time.Now().Unix()
+	ob.SetSnapshot(timestamp, bids, asks)
+	result, _, err := ob.BuyBase(0.2)
+	if err != nil {
+		t.Error(err.Error())
+	}
+	if result != 67.024 {
+		t.Errorf("Expected 198.6 but got %f", result)
+	}
+}
+
+func TestBuyQuote(t *testing.T) {
+	ob := NewOrderbookFeed("ETH-DAI")
+	bids := []*Update{
+		&Update{Price: "333.2", Size: "0.5"},
+		&Update{Price: "320", Size: "0.5"},
+		&Update{Price: "310", Size: "1.5"},
