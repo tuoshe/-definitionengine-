@@ -173,3 +173,36 @@ func TestSellQuote(t *testing.T) {
 		t.Error(err.Error())
 	}
 	if result != 0.14920028646455 {
+		t.Errorf("Expected 0.14920028646455 but got %f", result)
+	}
+}
+
+func TestErrorWillReturnIfNoSnapshotWasEverSet(t *testing.T) {
+	ob := NewOrderbookFeed("ETH-DAI")
+	ob.WriteUpdate(1, []*Update{
+		&Update{Price: "333.2", Size: "1.5"},
+	}, []*Update{})
+	_, _, err1 := ob.SellBase(0.6)
+	_, _, err2 := ob.BuyBase(0.6)
+	if err1 == nil || err2 == nil {
+		t.Error("No orderbook operations should be allowed if a snapshot was never set")
+	}
+}
+
+func TestEndToEnd(t *testing.T) {
+	response, err := http.Get(URL)
+	defer response.Body.Close()
+	if err != nil {
+		panic(err)
+	}
+
+	var l2Data LevelTwoOrderbook
+	decoder := json.NewDecoder(response.Body)
+	decoder.Decode(&l2Data)
+
+	ob := NewOrderbookFeed("ETH-DAI")
+	bids := transformToUpdate(l2Data.Bids)
+	asks := transformToUpdate(l2Data.Asks)
+	ob.SetSnapshot(time.Now().Unix(), bids, asks)
+
+	for i := 10; i < 400; i += 10 {
