@@ -206,3 +206,33 @@ func TestEndToEnd(t *testing.T) {
 	ob.SetSnapshot(time.Now().Unix(), bids, asks)
 
 	for i := 10; i < 400; i += 10 {
+		quoteObtained, _, _ := ob.SellBase(float64(i))
+		baseObtained, _, _ := ob.BuyQuote(quoteObtained)
+
+		if math.Round(baseObtained) != float64(i) {
+			t.Errorf("Expcted %d but got %f", i, baseObtained)
+		}
+	}
+}
+
+func TestTimestampUpdateIsWorking(t *testing.T) {
+	ob := NewOrderbookFeed("ETH-DAI")
+	ob.SetSnapshot(1, []*Update{}, []*Update{})
+	bids := []*Update{
+		&Update{Price: "333.2", Size: "0.5"},
+		&Update{Price: "310", Size: "1.5"},
+	}
+	asks := []*Update{}
+	timestamp := time.Now().Unix()
+	isUpdatedCorrectly := ob.SetSnapshot(timestamp, bids, asks)
+	if !isUpdatedCorrectly {
+		t.Errorf("Update should work correctly")
+	}
+
+	bids = []*Update{
+		&Update{Price: "320", Size: "0.5"},
+	}
+	isUpdatedCorrectly = ob.WriteUpdate(timestamp-1, bids, asks)
+	if isUpdatedCorrectly {
+		t.Errorf("Update should not have worked due to old timestamp")
+	}
