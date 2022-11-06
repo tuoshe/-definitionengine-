@@ -236,3 +236,38 @@ func TestTimestampUpdateIsWorking(t *testing.T) {
 	if isUpdatedCorrectly {
 		t.Errorf("Update should not have worked due to old timestamp")
 	}
+}
+
+func TestSellQuoteWhenBookIsOld(t *testing.T) {
+	ob := NewOrderbookFeed("ETH-DAI")
+	bids := []*Update{
+		&Update{Price: "333.2", Size: "0.5"},
+		&Update{Price: "320", Size: "0.5"},
+		&Update{Price: "310", Size: "1.5"},
+	}
+	asks := []*Update{
+		&Update{Price: "335.12", Size: "0.5"},
+	}
+	timestamp := time.Now().Unix() - 6
+	ob.SetSnapshot(timestamp, bids, asks)
+
+	_, _, err := ob.SellQuote(50)
+	if err == nil || err.Error() != "Orderbook is stale" {
+		t.Error("Orderbook is stale but no error was raised")
+	}
+
+	_, _, err = ob.SellBase(50)
+	if err == nil || err.Error() != "Orderbook is stale" {
+		t.Error("Orderbook is stale but no error was raised")
+	}
+}
+
+func TestOrderbookCleanup(t *testing.T) {
+	ob := NewOrderbookFeed("ETH-DAI")
+	bids := []*Update{
+		&Update{Price: "333.2", Size: "0.5"},
+		&Update{Price: "320", Size: "0.5"},
+		&Update{Price: "310", Size: "1.5"},
+	}
+	asks := []*Update{
+		&Update{Price: "335.12", Size: "0.5"},
