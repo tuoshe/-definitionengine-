@@ -7,3 +7,4 @@ type Update struct {
 	Size  string
 }
 
+type orderbookSortedKey str
