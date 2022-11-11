@@ -7,4 +7,6 @@ type Update struct {
 	Size  string
 }
 
-type orderbookSortedKey str
+type orderbookSortedKey struct {
+	Value float64
+	Key   string
