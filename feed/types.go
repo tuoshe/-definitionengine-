@@ -10,3 +10,6 @@ type Update struct {
 type orderbookSortedKey struct {
 	Value float64
 	Key   string
+}
+
+type sortByOrderb
