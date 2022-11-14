@@ -12,4 +12,4 @@ type orderbookSortedKey struct {
 	Key   string
 }
 
-type sortByOrderb
+type sortByOrderbookPrice []*orderbookSorte
