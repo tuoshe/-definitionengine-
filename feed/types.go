@@ -15,4 +15,5 @@ type orderbookSortedKey struct {
 type sortByOrderbookPrice []*orderbookSortedKey
 
 type LevelTwoOrderbook struct {
-	Bids [][]interface{}
+	Bids [][]interface{} `json:"bids"`
+	Asks [][]interface{}
