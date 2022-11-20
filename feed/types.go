@@ -20,3 +20,4 @@ type LevelTwoOrderbook struct {
 }
 
 type TickerChannel struct {
+	Name       string   `json:"nam
