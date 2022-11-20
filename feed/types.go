@@ -19,4 +19,4 @@ type LevelTwoOrderbook struct {
 	Asks [][]interface{} `json:"asks"`
 }
 
-type Tic
+type TickerChannel struct {
