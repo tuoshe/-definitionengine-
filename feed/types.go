@@ -21,4 +21,7 @@ type LevelTwoOrderbook struct {
 
 type TickerChannel struct {
 	Name       string   `json:"name"`
-	ProductIds []string `json:
+	ProductIds []string `json:"product_ids"`
+}
+
+type Webs
