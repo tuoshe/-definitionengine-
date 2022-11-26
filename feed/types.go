@@ -24,4 +24,5 @@ type TickerChannel struct {
 	ProductIds []string `json:"product_ids"`
 }
 
-type Webs
+type WebsocketType struct {
+	Type str
