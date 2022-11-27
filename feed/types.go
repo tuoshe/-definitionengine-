@@ -27,4 +27,5 @@ type TickerChannel struct {
 type WebsocketType struct {
 	Type string `json:"type"`
 }
-type MessageSubscript
+type MessageSubscription struct {
+	Web
