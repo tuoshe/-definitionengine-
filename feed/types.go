@@ -29,4 +29,4 @@ type WebsocketType struct {
 }
 type MessageSubscription struct {
 	WebsocketType
-	ProductIds 
+	ProductIds []string      `json:"product_i
