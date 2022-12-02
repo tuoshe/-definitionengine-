@@ -30,4 +30,4 @@ type WebsocketType struct {
 type MessageSubscription struct {
 	WebsocketType
 	ProductIds []string      `json:"product_ids"`
-	Channels   []int
+	Channels   []interface{} `json:"channels
