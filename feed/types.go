@@ -32,4 +32,6 @@ type MessageSubscription struct {
 	ProductIds []string      `json:"product_ids"`
 	Channels   []interface{} `json:"channels"`
 }
-type L2UpdateMessage
+type L2UpdateMessage struct {
+	WebsocketType
+	ProductID string 
