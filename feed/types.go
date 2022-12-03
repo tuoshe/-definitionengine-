@@ -34,4 +34,4 @@ type MessageSubscription struct {
 }
 type L2UpdateMessage struct {
 	WebsocketType
-	ProductID string 
+	ProductID string     `json:"product_id"
