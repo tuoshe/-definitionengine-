@@ -36,4 +36,7 @@ type L2UpdateMessage struct {
 	WebsocketType
 	ProductID string     `json:"product_id"`
 	Changes   [][]string `json:"changes"`
-	Time      time.Time  `
+	Time      time.Time  `json:"time"`
+}
+
+type L2SnapshotMessa
