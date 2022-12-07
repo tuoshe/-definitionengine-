@@ -39,4 +39,6 @@ type L2UpdateMessage struct {
 	Time      time.Time  `json:"time"`
 }
 
-type L2SnapshotMessa
+type L2SnapshotMessage struct {
+	WebsocketType
+	P
