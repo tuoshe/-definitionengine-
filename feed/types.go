@@ -41,4 +41,4 @@ type L2UpdateMessage struct {
 
 type L2SnapshotMessage struct {
 	WebsocketType
-	P
+	ProductID string     `json:"product_id"`
