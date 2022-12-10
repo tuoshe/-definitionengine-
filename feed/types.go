@@ -43,4 +43,7 @@ type L2SnapshotMessage struct {
 	WebsocketType
 	ProductID string     `json:"product_id"`
 	Bids      [][]string `json:"bids"`
-	Asks      [][]string `
+	Asks      [][]string `json:"asks"`
+}
+
+type Orderbo
