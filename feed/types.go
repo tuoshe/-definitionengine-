@@ -46,4 +46,5 @@ type L2SnapshotMessage struct {
 	Asks      [][]string `json:"asks"`
 }
 
-type Orderbo
+type OrderbookModel interface {
+	SetSna
