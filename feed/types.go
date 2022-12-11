@@ -47,4 +47,4 @@ type L2SnapshotMessage struct {
 }
 
 type OrderbookModel interface {
-	SetSna
+	SetSnapshot(epoch int64, bids []*Updat
