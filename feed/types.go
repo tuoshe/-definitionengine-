@@ -48,4 +48,4 @@ type L2SnapshotMessage struct {
 
 type OrderbookModel interface {
 	SetSnapshot(epoch int64, bids []*Update, asks []*Update) bool
-	WriteUpda
+	WriteUpdate(epoch int64, bids [
