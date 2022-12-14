@@ -1,3 +1,3 @@
 package feed
 
-const URL = "ht
+const URL = "https://api.pro.coinbase.com
