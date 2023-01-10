@@ -10,4 +10,8 @@ import (
 
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	log "github.com/sirupsen/logrus"
-	"google.golang.o
+	"google.golang.org/grpc"
+)
+
+func main() {
+	market := os
