@@ -9,4 +9,5 @@ import (
 	"pirosb3/real_feed/rpc"
 
 	"github.com/prometheus/client_golang/prometheus/promhttp"
-	log "github.com/siru
+	log "github.com/sirupsen/logrus"
+	"google.golang.o
