@@ -14,4 +14,5 @@ import (
 )
 
 func main() {
-	market := os
+	market := os.Getenv("MARKET")
+	port :
