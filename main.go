@@ -15,4 +15,5 @@ import (
 
 func main() {
 	market := os.Getenv("MARKET")
-	port :
+	port := "8000"
+	ctx, _ := context.Wi
