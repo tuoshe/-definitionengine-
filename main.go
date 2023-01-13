@@ -19,4 +19,4 @@ func main() {
 	ctx, _ := context.WithCancel(context.Background())
 
 	// Start feed controller
-	fc := control
+	fc := controller.NewFeedController(c
