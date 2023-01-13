@@ -18,4 +18,5 @@ func main() {
 	port := "8000"
 	ctx, _ := context.WithCancel(context.Background())
 
-	// Start f
+	// Start feed controller
+	fc := control
