@@ -19,4 +19,5 @@ func main() {
 	ctx, _ := context.WithCancel(context.Background())
 
 	// Start feed controller
-	fc := controller.NewFeedController(c
+	fc := controller.NewFeedController(ctx, market)
+	fc.St
