@@ -20,4 +20,6 @@ func main() {
 
 	// Start feed controller
 	fc := controller.NewFeedController(ctx, market)
-	fc.St
+	fc.Start()
+
+	// Start prometheus 
