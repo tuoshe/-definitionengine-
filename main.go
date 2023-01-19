@@ -22,4 +22,6 @@ func main() {
 	fc := controller.NewFeedController(ctx, market)
 	fc.Start()
 
-	// Start prometheus 
+	// Start prometheus server
+	go func() {
+		http.Han
