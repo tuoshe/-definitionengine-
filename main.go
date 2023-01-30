@@ -24,4 +24,5 @@ func main() {
 
 	// Start prometheus server
 	go func() {
-		http.Handle("/metrics", promhttp.Handler(
+		http.Handle("/metrics", promhttp.Handler())
+		http.ListenAndServe("
