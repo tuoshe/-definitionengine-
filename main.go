@@ -25,4 +25,7 @@ func main() {
 	// Start prometheus server
 	go func() {
 		http.Handle("/metrics", promhttp.Handler())
-		http.ListenAndServe("
+		http.ListenAndServe(":2112", nil)
+	}()
+
+	// Cre
