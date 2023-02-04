@@ -29,4 +29,4 @@ func main() {
 	}()
 
 	// Create wrapper service
-	orderbookController := controller.Ne
+	orderbookController := controller.NewOrderbookGrpcController(fc
