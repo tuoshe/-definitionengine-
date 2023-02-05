@@ -29,4 +29,6 @@ func main() {
 	}()
 
 	// Create wrapper service
-	orderbookController := controller.NewOrderbookGrpcController(fc
+	orderbookController := controller.NewOrderbookGrpcController(fc, market)
+
+	// Start gRP
