@@ -31,4 +31,5 @@ func main() {
 	// Create wrapper service
 	orderbookController := controller.NewOrderbookGrpcController(fc, market)
 
-	// Start gRP
+	// Start gRPC server
+	grpcServer := grpc.NewSe
