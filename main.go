@@ -32,4 +32,5 @@ func main() {
 	orderbookController := controller.NewOrderbookGrpcController(fc, market)
 
 	// Start gRPC server
-	grpcServer := grpc.NewSe
+	grpcServer := grpc.NewServer()
+	rpc.RegisterOrderbo
