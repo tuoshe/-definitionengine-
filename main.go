@@ -33,4 +33,4 @@ func main() {
 
 	// Start gRPC server
 	grpcServer := grpc.NewServer()
-	rpc.RegisterOrderbo
+	rpc.RegisterOrderbookServiceServer(grpcServer, 
