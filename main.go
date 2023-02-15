@@ -34,4 +34,5 @@ func main() {
 	// Start gRPC server
 	grpcServer := grpc.NewServer()
 	rpc.RegisterOrderbookServiceServer(grpcServer, *orderbookController)
-	// ... // determine whether t
+	// ... // determine whether to use TLS
+	lis, err := net.L
