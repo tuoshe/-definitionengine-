@@ -36,4 +36,5 @@ func main() {
 	rpc.RegisterOrderbookServiceServer(grpcServer, *orderbookController)
 	// ... // determine whether to use TLS
 	lis, err := net.Listen("tcp", ":"+port)
-	if e
+	if err != nil {
+		log.Fatalln(err
