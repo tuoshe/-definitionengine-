@@ -37,4 +37,6 @@ func main() {
 	// ... // determine whether to use TLS
 	lis, err := net.Listen("tcp", ":"+port)
 	if err != nil {
-		log.Fatalln(err
+		log.Fatalln(err.Error())
+	}
+	log.WithField("ma
