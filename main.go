@@ -39,4 +39,4 @@ func main() {
 	if err != nil {
 		log.Fatalln(err.Error())
 	}
-	log.WithField("ma
+	log.WithField("market", market).WithField("port", p
