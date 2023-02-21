@@ -39,4 +39,5 @@ func main() {
 	if err != nil {
 		log.Fatalln(err.Error())
 	}
-	log.WithField("market", market).WithField("port", port).Infoln("Starting gRPC s
+	log.WithField("market", market).WithField("port", port).Infoln("Starting gRPC server")
+	grpcServer.Serv
