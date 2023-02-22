@@ -23,3 +23,39 @@ const (
 )
 
 // This is a compile-time assertion that a sufficiently up-to-date version
+// of the legacy proto package is being used.
+const _ = proto.ProtoPackageIsVersion4
+
+// The request message containing the user's name.
+type PricingRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Product  string  `protobuf:"bytes,1,opt,name=product,proto3" json:"product,omitempty"`
+	InAmount float32 `protobuf:"fixed32,2,opt,name=inAmount,proto3" json:"inAmount,omitempty"`
+}
+
+func (x *PricingRequest) Reset() {
+	*x = PricingRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_service_proto_msgTypes[0]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *PricingRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*PricingRequest) ProtoMessage() {}
+
+func (x *PricingRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_service_proto_msgTypes[0]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
