@@ -40,4 +40,5 @@ func main() {
 		log.Fatalln(err.Error())
 	}
 	log.WithField("market", market).WithField("port", port).Infoln("Starting gRPC server")
-	grpcServer.Serv
+	grpcServer.Serve(lis)
+}
