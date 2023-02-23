@@ -87,3 +87,30 @@ type PricingResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
+
+	Product     string  `protobuf:"bytes,1,opt,name=product,proto3" json:"product,omitempty"`
+	OutAmount   float32 `protobuf:"fixed32,2,opt,name=outAmount,proto3" json:"outAmount,omitempty"`
+	LastUpdated int64   `protobuf:"varint,3,opt,name=lastUpdated,proto3" json:"lastUpdated,omitempty"`
+	Error       string  `protobuf:"bytes,4,opt,name=error,proto3" json:"error,omitempty"`
+}
+
+func (x *PricingResponse) Reset() {
+	*x = PricingResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_service_proto_msgTypes[1]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *PricingResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*PricingResponse) ProtoMessage() {}
+
+func (x *PricingResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_service_proto_msgTypes[1]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
