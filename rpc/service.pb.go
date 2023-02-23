@@ -59,3 +59,31 @@ func (x *PricingRequest) ProtoReflect() protoreflect.Message {
 			ms.StoreMessageInfo(mi)
 		}
 		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use PricingRequest.ProtoReflect.Descriptor instead.
+func (*PricingRequest) Descriptor() ([]byte, []int) {
+	return file_service_proto_rawDescGZIP(), []int{0}
+}
+
+func (x *PricingRequest) GetProduct() string {
+	if x != nil {
+		return x.Product
+	}
+	return ""
+}
+
+func (x *PricingRequest) GetInAmount() float32 {
+	if x != nil {
+		return x.InAmount
+	}
+	return 0
+}
+
+// The response message containing the greetings
+type PricingResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
