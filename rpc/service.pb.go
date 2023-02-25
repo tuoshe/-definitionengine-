@@ -114,3 +114,32 @@ func (x *PricingResponse) ProtoReflect() protoreflect.Message {
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use PricingResponse.ProtoReflect.Descriptor instead.
+func (*PricingResponse) Descriptor() ([]byte, []int) {
+	return file_service_proto_rawDescGZIP(), []int{1}
+}
+
+func (x *PricingResponse) GetProduct() string {
+	if x != nil {
+		return x.Product
+	}
+	return ""
+}
+
+func (x *PricingResponse) GetOutAmount() float32 {
+	if x != nil {
+		return x.OutAmount
+	}
+	return 0
+}
+
+func (x *PricingResponse) GetLastUpdated() int64 {
+	if x != nil {
+		return x.LastUpdated
