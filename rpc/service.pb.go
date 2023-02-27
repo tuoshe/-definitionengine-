@@ -199,3 +199,31 @@ func file_service_proto_rawDescGZIP() []byte {
 		file_service_proto_rawDescData = protoimpl.X.CompressGZIP(file_service_proto_rawDescData)
 	})
 	return file_service_proto_rawDescData
+}
+
+var file_service_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_service_proto_goTypes = []interface{}{
+	(*PricingRequest)(nil),  // 0: PricingRequest
+	(*PricingResponse)(nil), // 1: PricingResponse
+}
+var file_service_proto_depIdxs = []int32{
+	0, // 0: OrderbookService.BuyBase:input_type -> PricingRequest
+	0, // 1: OrderbookService.BuyQuote:input_type -> PricingRequest
+	0, // 2: OrderbookService.SellBase:input_type -> PricingRequest
+	0, // 3: OrderbookService.SellQuote:input_type -> PricingRequest
+	1, // 4: OrderbookService.BuyBase:output_type -> PricingResponse
+	1, // 5: OrderbookService.BuyQuote:output_type -> PricingResponse
+	1, // 6: OrderbookService.SellBase:output_type -> PricingResponse
+	1, // 7: OrderbookService.SellQuote:output_type -> PricingResponse
+	4, // [4:8] is the sub-list for method output_type
+	0, // [0:4] is the sub-list for method input_type
+	0, // [0:0] is the sub-list for extension type_name
+	0, // [0:0] is the sub-list for extension extendee
+	0, // [0:0] is the sub-list for field type_name
+}
+
+func init() { file_service_proto_init() }
+func file_service_proto_init() {
+	if File_service_proto != nil {
+		return
+	}
