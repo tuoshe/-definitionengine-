@@ -259,3 +259,16 @@ func file_service_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_service_proto_rawDesc,
 			NumEnums:      0,
+			NumMessages:   2,
+			NumExtensions: 0,
+			NumServices:   1,
+		},
+		GoTypes:           file_service_proto_goTypes,
+		DependencyIndexes: file_service_proto_depIdxs,
+		MessageInfos:      file_service_proto_msgTypes,
+	}.Build()
+	File_service_proto = out.File
+	file_service_proto_rawDesc = nil
+	file_service_proto_goTypes = nil
+	file_service_proto_depIdxs = nil
+}
