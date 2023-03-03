@@ -1,2 +1,2 @@
 syntax = "proto3";
-option 
+option go_package = "pirosb3/real_feed/rpc
