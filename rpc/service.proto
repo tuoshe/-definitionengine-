@@ -1,4 +1,6 @@
 syntax = "proto3";
 option go_package = "pirosb3/real_feed/rpc";
 
-service OrderbookServi
+service OrderbookService {
+  // Sends a greeting
+  rpc 
