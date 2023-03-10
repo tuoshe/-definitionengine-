@@ -4,4 +4,5 @@ option go_package = "pirosb3/real_feed/rpc";
 service OrderbookService {
   // Sends a greeting
   rpc BuyBase (PricingRequest) returns (PricingResponse) {}
-  rpc BuyQuote (PricingRequest)
+  rpc BuyQuote (PricingRequest) returns (PricingResponse) {}
+  rpc SellBase
