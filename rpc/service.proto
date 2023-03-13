@@ -5,4 +5,5 @@ service OrderbookService {
   // Sends a greeting
   rpc BuyBase (PricingRequest) returns (PricingResponse) {}
   rpc BuyQuote (PricingRequest) returns (PricingResponse) {}
-  rpc SellBase (PricingRequest) returns (PricingResponse) {
+  rpc SellBase (PricingRequest) returns (PricingResponse) {}
+  rpc SellQuote (Pricin
