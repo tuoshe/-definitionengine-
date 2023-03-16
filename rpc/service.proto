@@ -6,4 +6,7 @@ service OrderbookService {
   rpc BuyBase (PricingRequest) returns (PricingResponse) {}
   rpc BuyQuote (PricingRequest) returns (PricingResponse) {}
   rpc SellBase (PricingRequest) returns (PricingResponse) {}
-  rpc SellQuote (PricingRequest) returns (PricingResp
+  rpc SellQuote (PricingRequest) returns (PricingResponse) {}
+}
+
+// The request m
