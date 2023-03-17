@@ -10,3 +10,5 @@ service OrderbookService {
 }
 
 // The request message containing the user's name.
+message PricingRequest {
+  string p
