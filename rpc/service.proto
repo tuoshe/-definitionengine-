@@ -9,4 +9,4 @@ service OrderbookService {
   rpc SellQuote (PricingRequest) returns (PricingResponse) {}
 }
 
-// The request m
+// The request message containing the user's name.
