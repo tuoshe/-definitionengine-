@@ -13,3 +13,6 @@ service OrderbookService {
 message PricingRequest {
   string product = 1;
   float inAmount = 2;
+}
+
+// The response m
