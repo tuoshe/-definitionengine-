@@ -15,4 +15,4 @@ message PricingRequest {
   float inAmount = 2;
 }
 
-// The response m
+// The response message containing the greeting
