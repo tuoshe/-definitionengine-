@@ -16,4 +16,5 @@ message PricingRequest {
 }
 
 // The response message containing the greetings
-message PricingRespons
+message PricingResponse {
+  string product = 1;
