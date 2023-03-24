@@ -18,3 +18,5 @@ message PricingRequest {
 // The response message containing the greetings
 message PricingResponse {
   string product = 1;
+  float outAmount = 2;
+  i
