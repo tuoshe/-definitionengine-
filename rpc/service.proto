@@ -20,4 +20,5 @@ message PricingResponse {
   string product = 1;
   float outAmount = 2;
   int64 lastUpdated = 3;
-  string 
+  string error = 4;
+}
