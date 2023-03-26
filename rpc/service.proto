@@ -19,4 +19,5 @@ message PricingRequest {
 message PricingResponse {
   string product = 1;
   float outAmount = 2;
-  i
+  int64 lastUpdated = 3;
+  string 
