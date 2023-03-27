@@ -18,3 +18,35 @@ const _ = grpc.SupportPackageIsVersion7
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type OrderbookServiceClient interface {
+	// Sends a greeting
+	BuyBase(ctx context.Context, in *PricingRequest, opts ...grpc.CallOption) (*PricingResponse, error)
+	BuyQuote(ctx context.Context, in *PricingRequest, opts ...grpc.CallOption) (*PricingResponse, error)
+	SellBase(ctx context.Context, in *PricingRequest, opts ...grpc.CallOption) (*PricingResponse, error)
+	SellQuote(ctx context.Context, in *PricingRequest, opts ...grpc.CallOption) (*PricingResponse, error)
+}
+
+type orderbookServiceClient struct {
+	cc grpc.ClientConnInterface
+}
+
+func NewOrderbookServiceClient(cc grpc.ClientConnInterface) OrderbookServiceClient {
+	return &orderbookServiceClient{cc}
+}
+
+func (c *orderbookServiceClient) BuyBase(ctx context.Context, in *PricingRequest, opts ...grpc.CallOption) (*PricingResponse, error) {
+	out := new(PricingResponse)
+	err := c.cc.Invoke(ctx, "/OrderbookService/BuyBase", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *orderbookServiceClient) BuyQuote(ctx context.Context, in *PricingRequest, opts ...grpc.CallOption) (*PricingResponse, error) {
+	out := new(PricingResponse)
+	err := c.cc.Invoke(ctx, "/OrderbookService/BuyQuote", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
