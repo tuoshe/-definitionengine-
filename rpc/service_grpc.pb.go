@@ -50,3 +50,35 @@ func (c *orderbookServiceClient) BuyQuote(ctx context.Context, in *PricingReques
 	}
 	return out, nil
 }
+
+func (c *orderbookServiceClient) SellBase(ctx context.Context, in *PricingRequest, opts ...grpc.CallOption) (*PricingResponse, error) {
+	out := new(PricingResponse)
+	err := c.cc.Invoke(ctx, "/OrderbookService/SellBase", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *orderbookServiceClient) SellQuote(ctx context.Context, in *PricingRequest, opts ...grpc.CallOption) (*PricingResponse, error) {
+	out := new(PricingResponse)
+	err := c.cc.Invoke(ctx, "/OrderbookService/SellQuote", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// OrderbookServiceServer is the server API for OrderbookService service.
+// All implementations must embed UnimplementedOrderbookServiceServer
+// for forward compatibility
+type OrderbookServiceServer interface {
+	// Sends a greeting
+	BuyBase(context.Context, *PricingRequest) (*PricingResponse, error)
+	BuyQuote(context.Context, *PricingRequest) (*PricingResponse, error)
+	SellBase(context.Context, *PricingRequest) (*PricingResponse, error)
+	SellQuote(context.Context, *PricingRequest) (*PricingResponse, error)
+	mustEmbedUnimplementedOrderbookServiceServer()
+}
+
+// UnimplementedOrderbookServiceServer must be embedded to have forward compatible implementations.
