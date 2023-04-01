@@ -116,3 +116,23 @@ func _OrderbookService_BuyBase_Handler(srv interface{}, ctx context.Context, dec
 		return nil, err
 	}
 	if interceptor == nil {
+		return srv.(OrderbookServiceServer).BuyBase(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/OrderbookService/BuyBase",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(OrderbookServiceServer).BuyBase(ctx, req.(*PricingRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _OrderbookService_BuyQuote_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PricingRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(OrderbookServiceServer).BuyQuote(ctx, in)
+	}
