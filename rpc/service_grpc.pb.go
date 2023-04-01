@@ -82,3 +82,37 @@ type OrderbookServiceServer interface {
 }
 
 // UnimplementedOrderbookServiceServer must be embedded to have forward compatible implementations.
+type UnimplementedOrderbookServiceServer struct {
+}
+
+func (UnimplementedOrderbookServiceServer) BuyBase(context.Context, *PricingRequest) (*PricingResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method BuyBase not implemented")
+}
+func (UnimplementedOrderbookServiceServer) BuyQuote(context.Context, *PricingRequest) (*PricingResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method BuyQuote not implemented")
+}
+func (UnimplementedOrderbookServiceServer) SellBase(context.Context, *PricingRequest) (*PricingResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method SellBase not implemented")
+}
+func (UnimplementedOrderbookServiceServer) SellQuote(context.Context, *PricingRequest) (*PricingResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method SellQuote not implemented")
+}
+func (UnimplementedOrderbookServiceServer) mustEmbedUnimplementedOrderbookServiceServer() {}
+
+// UnsafeOrderbookServiceServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to OrderbookServiceServer will
+// result in compilation errors.
+type UnsafeOrderbookServiceServer interface {
+	mustEmbedUnimplementedOrderbookServiceServer()
+}
+
+func RegisterOrderbookServiceServer(s *grpc.Server, srv OrderbookServiceServer) {
+	s.RegisterService(&_OrderbookService_serviceDesc, srv)
+}
+
+func _OrderbookService_BuyBase_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PricingRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
