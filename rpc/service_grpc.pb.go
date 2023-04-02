@@ -136,3 +136,39 @@ func _OrderbookService_BuyQuote_Handler(srv interface{}, ctx context.Context, de
 	if interceptor == nil {
 		return srv.(OrderbookServiceServer).BuyQuote(ctx, in)
 	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/OrderbookService/BuyQuote",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(OrderbookServiceServer).BuyQuote(ctx, req.(*PricingRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _OrderbookService_SellBase_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PricingRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(OrderbookServiceServer).SellBase(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/OrderbookService/SellBase",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(OrderbookServiceServer).SellBase(ctx, req.(*PricingRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _OrderbookService_SellQuote_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PricingRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(OrderbookServiceServer).SellQuote(ctx, in)
+	}
