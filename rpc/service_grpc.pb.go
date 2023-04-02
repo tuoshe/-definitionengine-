@@ -172,3 +172,37 @@ func _OrderbookService_SellQuote_Handler(srv interface{}, ctx context.Context, d
 	if interceptor == nil {
 		return srv.(OrderbookServiceServer).SellQuote(ctx, in)
 	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/OrderbookService/SellQuote",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(OrderbookServiceServer).SellQuote(ctx, req.(*PricingRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+var _OrderbookService_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "OrderbookService",
+	HandlerType: (*OrderbookServiceServer)(nil),
+	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "BuyBase",
+			Handler:    _OrderbookService_BuyBase_Handler,
+		},
+		{
+			MethodName: "BuyQuote",
+			Handler:    _OrderbookService_BuyQuote_Handler,
+		},
+		{
+			MethodName: "SellBase",
+			Handler:    _OrderbookService_SellBase_Handler,
+		},
+		{
+			MethodName: "SellQuote",
+			Handler:    _OrderbookService_SellQuote_Handler,
+		},
+	},
+	Streams:  []grpc.StreamDesc{},
+	Metadata: "service.proto",
+}
